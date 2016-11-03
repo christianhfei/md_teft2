@@ -1,0 +1,152 @@
+﻿<form>
+    <div class="panel sticky-footer">
+        <div class="panel-heading">
+            <h1 class="h2">{{model.title}}</h1>
+        </div>
+        <div class="panel-body" style="padding-top: 0;">
+            <div class="form-group">
+                <label class="">Client ID / MA / SSN / DOB:</label>
+                <input type="text" class="form-control" placeholder="Please specify only one">
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 form-group date">
+                    <label class="" title="Service From Date">From Date:</label>
+                    <input type="text" class="form-control" placeholder="07/01/2016">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 form-group date">
+                    <label class="" title="Service To Date">To Date:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+                    <label ng-show="model.showResultsType == 'services'">Service Status:</label>
+                    <label ng-show="model.showResultsType == 'claims'">Claim Status:</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>Closed</option>
+                        <option>DHMH in progress</option>
+                        <option>DHMH Reviewed</option>
+                        <option>Discarded</option>
+                        <option>Needs authorization</option>
+                        <option>New</option>
+                        <option>Not authorized</option>
+                        <option>Pending DHMH</option>
+                        <option>Pending Provider</option>
+                        <option>Provider – In progress</option>
+                        <option>Paid </option>
+                        <option>Rejected</option>
+                        <option>Ready</option>
+                        <option>Submitted to MMIS</option>
+                    </select>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+                    <label class="" title="Restrict Search to:">Show Only:</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>Services with exceptions </option>
+                        <option>Resolved services</option>
+                        <option>Missing times exceptions</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" ng-show="model.showResultsType == 'services'">
+                <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+                    <label class="">Tag:</label>
+                    <select class="form-control">
+                        <option> </option>
+                        <option>Tagged</option>
+                        <option>Untagged</option>
+
+                    </select>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 form-group">
+                    <label class="">Category:</label>
+                    <select class="form-control">
+                        <option> </option>
+                        <option>General</option>
+                        <option>Follow up</option>
+                        <option>Question</option>
+                        <option>Research</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" ng-show="model.showResultsType == 'services'">
+                <label class="">Exception type:</label>
+                <select class="form-control">
+                    <option></option>
+                    <option>All</option>
+                    <option>Ineligible</option>
+                    <option>Not Enrolled</option>
+                    <option>No ISAS Service in POS</option>
+                    <option>Missing Clock In</option>
+                    <option>Missing Clock Out </option>
+                    <option>No Active POS</option>
+                    <option>No matching shared attendant in POS</option>
+                    <option>Over 14 hours shift</option>
+                    <option>Overlap service found for the same client</option>
+                    <option>Overlap service found for the same provider </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="">Provider Name / Number / FEIN:</label>
+                <input type="text" class="form-control" value="436523">
+            </div>
+            <div class="form-group">
+                <label class="">Provider Type:</label>
+                <select class="form-control">
+                    <option></option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 form-group">
+                    <label class="">Staff First Name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 form-group">
+                    <label class="">Staff Last Name:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="">Staff SSN:</label>
+                <input type="text" class="form-control" value="436523">
+            </div>
+
+
+            <h2 ng-show="model.showResultsType == 'services'">Assignment</h2>
+            <div class="row" ng-show="model.showResultsType == 'services'">
+                <div class="col-xs-12 col-sm-12 col-md-6 form-group">
+                    <label class="">Status:</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>Assigned</option>
+                        <option>Unassigned</option>
+                        <option>Not applicable</option>
+                    </select>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 form-group">
+                    <label class="">Assigned Staff:</label>
+                    <select class="form-control">
+                        <option></option>
+                        <option>User 1</option>
+                        <option>User 2</option>
+                        <option>User 3</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="pull-right">
+                        <button class="btn btn-default">Clear</button>
+                        <button class="btn btn-success" type="button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
