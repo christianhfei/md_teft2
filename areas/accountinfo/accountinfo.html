@@ -1,0 +1,76 @@
+<standard-layout>
+  <div id="breadcrumb">
+    <a ng-href="#/home" class="breadcrumb"><span class="fa fa-home"></span>Home</a>
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <a ng-href="#/information" class="breadcrumb"><span class="fa fa-user"></span>My Information</a>
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <a href="#/account" class="breadcrumb"><span class="fa fa-gears"></span>My Account</a>
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <a href="#/accountinfo" class="breadcrumb"><span class="fa fa-pencil"></span>Change My Account Info</a>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Change My Account Information</h1>
+      <p class="lead">Please enter the information you wish to edit below, and click the "Save Changes" button when you are finished. Only fill out fields which you wish to make changes to.</p>
+    </div>
+  </div>
+    <div class="container-fluid input-background">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <span class="label">Current Email Address:</span>
+              <span class="data-element">ab.williams87@yahoo.com</span>
+            </div>
+          </div>
+          <div class="row input-container">
+            <div class="col-xs-12 col-sm-7 col-md-6 col-lg-4">
+              <label for="oldPass">Enter Your New Email Address:</label>
+              <input id="oldPass" type="email" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <span class="label">Current Phone Number:</span>
+              <span class="data-element">(240) 555-5555</span>
+            </div>
+          </div>
+          <div class="row input-container">
+            <div class="col-xs-12 col-sm-7 col-md-6 col-lg-4">
+              <label for="oldPass">Enter Your New Phone Number:</label>
+              <input id="oldPass" type="tel" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <span class="label">Current Phone Type:</span>
+              <span class="data-element">Cell Phone</span>
+            </div>
+          </div>
+          <div class="row input-container">
+            <div class="col-xs-12 col-sm-7 col-md-6 col-lg-4">
+              <label for="oldPass">What type of phone is your new phone?</label>
+              <select name="phoneType" id="phoneType" class="form-control input-lg">
+                <option value=" ">&nbsp;</option>
+                <option value="cell">Cell</option>
+                <option value="home">Home</option>
+                <option value="biz">Business</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="pull-right">
+          <a href="#/account" class="btn btn-success btn-lg">Save Password</a>
+        </div>
+      </div>
+    </div>
+
+
+
+</standard-layout>

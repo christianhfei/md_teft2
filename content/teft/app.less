@@ -1,3 +1,364 @@
+// out: app.css
+@mainBlue: #2C96D3;
+@darkerBlue: darken(@mainBlue, 6%);
+
+html{
+  font-size: 62.5% !important;
+}
+
+body{
+  font-size: 1.6rem
+}
+
+a.btn.btn-default.btn-lg.back-button{
+  margin-top: 15px !important;
+}
+
 a:hover {
   cursor: pointer;
+}
+
+h1{
+  font-size: 4.4rem;
+  font-weight: 700;
+}
+
+
+input[type='radio']{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+span{
+  &.label{
+    color: #333;
+    font-size: 1.6rem;
+  }
+  &.data-element{
+    font-size: 2rem;
+  }
+}
+
+
+
+div[data-toggle="buttons"] label.active{
+    color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label {
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 2em;
+text-align: left;
+white-space: nowrap;
+vertical-align: top;
+cursor: pointer;
+background-color: none;
+border: 0px solid
+#c8c8c8;
+border-radius: 3px;
+color: #c8c8c8;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+div[data-toggle="buttons"] label:hover {
+color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top{
+  background: #174d6c;
+  a.navbar-brand{
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: none;
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+div.info-panel{
+  background: lighten(#ccc, 12%);
+  border-radius: 4px;
+  margin: 25px auto 15px auto;
+  h1{
+    font-size: 4.4rem;
+  }
+
+  p.lead{
+    font-weight: bold;
+    font-size: 2.8rem;
+  }
+
+  p:not(.lead){
+    font-size: 2rem;
+  }
+}
+
+div#breadcrumb{
+  background: lighten(#ccc, 11%);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 15px 0 13px 0;
+  margin: 8px 0 0 0;
+  a.breadcrumb{
+    background: none;
+    font-weight: bold;
+    font-size: 2.2rem;
+    span.glyphicon, span.fa{
+      font-size: 2.3rem !important;
+      display: inline-block !important;
+      margin-right: 8px;
+    }
+  }
+
+  span.glyphicon.glyphicon-chevron-right{
+    font-size: 1.6rem;
+  }
+}
+
+div#accountInfo{
+  div.well{
+    background: lighten(#ccc, 11%);
+    div.row{
+      margin-bottom: 15px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      div[class|='col']{
+        span.label{
+          display: inline-block;
+          color: black;
+          width: 125px;
+          padding: 0;
+          font-size: 1.7rem;
+          text-align: right;
+        }
+        span.data-element{
+          text-align: left;
+          font-size: 2rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+div.container-fluid.input-background, div.container.input-background{
+  background: lighten(#ccc, 12%);
+  padding: 15px;
+  border-radius: 4px;
+  div.row.input-container{
+    margin-bottom: 15px;
+    div[class|="col"]{
+      label{
+        font-size: 1.7rem;
+      }
+      input.form-control{
+        padding: 20px 12px;
+        font-size: 1.8rem;
+        option{
+          font-size: 1.8rem;
+        }
+      }
+
+    }
+
+  }
+  div.row{
+    margin-bottom: 15px;
+    span.label{
+      display: inline-block;
+      color: #333;
+      width: auto;
+      padding: 0;
+      font-size: 1.7rem;
+      text-align: right;
+    }
+    span.data-element{
+      text-align: left;
+      font-size: 2rem;
+      display: inline-block;
+    }
+  }
+  &.planofservice{
+    div.row{
+      div[class|='col']{
+        span{
+          &.label{
+            display: inline-block;
+            text-align: right;
+            width: 150px;
+            margin-right: 5px;
+            vertical-align: top;
+            white-space: normal;
+
+          }
+          &.data-element{
+            margin-top: -5px;
+            margin-left: 15px;
+            display: inline-block;
+            text-align: left;
+            vertical-align: top;
+          }
+        }
+        table.table{
+          thead{
+            tr{
+              td{
+                font-weight: bold !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+table.table{
+
+}
+
+div.well{
+  p{
+    font-size: 2rem;
+  }
+}
+
+// Card Styles for menu options
+div.row.menu-container{
+  padding: 0;
+  height: 100%;
+  .menu-option{
+    height: auto;
+
+    .option-inner{
+      width: 100%;
+      padding: 25px 20px 20px 20px;
+      height: auto;
+      margin: 10px auto;
+      border: 8px solid #174d6c;
+      border-radius: 4px;
+      background: lighten(#CCC, 12%);
+      span.glyphicon, span.fa{
+        display: block;
+        color: darken(@darkerBlue, 15%);
+        font-size: 4rem;
+        margin-bottom: 5px;
+      }
+
+      a{
+
+        h2{
+          font-weight: 400 !important;
+          font-size: 3.5rem;
+          color: darken(@darkerBlue, 15%);
+          text-decoration: underline;
+          margin-bottom: 25px;
+          margin-top: 0;
+        }
+      }
+      div.well{
+        p.lead{
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        p:not(.lead){
+          font-size: 1.8rem;
+        }
+        ul{
+          li{
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+div.row.rep-container{
+    h2{
+      margin-top: 0;
+    }
+    input.rep-radio{
+      margin: 37px 0 0 50%;
+
+    }
+    span{
+      &.label{
+        color: #333;
+        font-size: 1.6rem;
+      }
+      &.data-element{
+        font-size: 2rem;
+      }
+    }
+
+}
+
+
+
+/*  MEDIA QUERIES */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  div.container.input-background.planofservice{
+      div.row{
+        div[class|='col']{
+          span{
+            &.label{
+              display: inline-block;
+              text-align: right;
+              width: 40%;
+              margin-right: 5px;
+              vertical-align: baseline;
+              white-space: normal;
+
+            }
+            &.data-element{
+              margin-top: -5px;
+              margin-left: 15px;
+              text-align: left;
+              display: inline-block;
+              vertical-align: baseline;
+            }
+          }
+        }
+      }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }

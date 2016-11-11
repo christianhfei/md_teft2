@@ -1,4 +1,274 @@
-util.print: Use console.log instead
+html {
+  font-size: 62.5% !important;
+}
+body {
+  font-size: 1.6rem;
+}
+a.btn.btn-default.btn-lg.back-button {
+  margin-top: 15px !important;
+}
 a:hover {
   cursor: pointer;
 }
+h1 {
+  font-size: 4.4rem;
+  font-weight: 700;
+}
+input[type='radio'] {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+span.label {
+  color: #333;
+  font-size: 1.6rem;
+}
+span.data-element {
+  font-size: 2rem;
+}
+div[data-toggle="buttons"] label.active {
+  color: #7AA3CC;
+}
+div[data-toggle="buttons"] label {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 2em;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: none;
+  border: 0px solid
+#c8c8c8;
+  border-radius: 3px;
+  color: #c8c8c8;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+div[data-toggle="buttons"] label:hover {
+  color: #7AA3CC;
+}
+div[data-toggle="buttons"] label:active,
+div[data-toggle="buttons"] label.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+nav.navbar.navbar-default.navbar-fixed-top {
+  background: #174d6c;
+}
+nav.navbar.navbar-default.navbar-fixed-top a.navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: none;
+}
+nav.navbar.navbar-default.navbar-fixed-top a.navbar-brand:hover {
+  color: white;
+}
+div.info-panel {
+  background: #ebebeb;
+  border-radius: 4px;
+  margin: 25px auto 15px auto;
+}
+div.info-panel h1 {
+  font-size: 4.4rem;
+}
+div.info-panel p.lead {
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+div.info-panel p:not(.lead) {
+  font-size: 2rem;
+}
+div#breadcrumb {
+  background: #e8e8e8;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 15px 0 13px 0;
+  margin: 8px 0 0 0;
+}
+div#breadcrumb a.breadcrumb {
+  background: none;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+div#breadcrumb a.breadcrumb span.glyphicon,
+div#breadcrumb a.breadcrumb span.fa {
+  font-size: 2.3rem !important;
+  display: inline-block !important;
+  margin-right: 8px;
+}
+div#breadcrumb span.glyphicon.glyphicon-chevron-right {
+  font-size: 1.6rem;
+}
+div#accountInfo div.well {
+  background: #e8e8e8;
+}
+div#accountInfo div.well div.row {
+  margin-bottom: 15px;
+}
+div#accountInfo div.well div.row:last-of-type {
+  margin-bottom: 0;
+}
+div#accountInfo div.well div.row div[class|='col'] span.label {
+  display: inline-block;
+  color: black;
+  width: 125px;
+  padding: 0;
+  font-size: 1.7rem;
+  text-align: right;
+}
+div#accountInfo div.well div.row div[class|='col'] span.data-element {
+  text-align: left;
+  font-size: 2rem;
+  display: inline-block;
+}
+div.container-fluid.input-background,
+div.container.input-background {
+  background: #ebebeb;
+  padding: 15px;
+  border-radius: 4px;
+}
+div.container-fluid.input-background div.row.input-container,
+div.container.input-background div.row.input-container {
+  margin-bottom: 15px;
+}
+div.container-fluid.input-background div.row.input-container div[class|="col"] label,
+div.container.input-background div.row.input-container div[class|="col"] label {
+  font-size: 1.7rem;
+}
+div.container-fluid.input-background div.row.input-container div[class|="col"] input.form-control,
+div.container.input-background div.row.input-container div[class|="col"] input.form-control {
+  padding: 20px 12px;
+  font-size: 1.8rem;
+}
+div.container-fluid.input-background div.row.input-container div[class|="col"] input.form-control option,
+div.container.input-background div.row.input-container div[class|="col"] input.form-control option {
+  font-size: 1.8rem;
+}
+div.container-fluid.input-background div.row,
+div.container.input-background div.row {
+  margin-bottom: 15px;
+}
+div.container-fluid.input-background div.row span.label,
+div.container.input-background div.row span.label {
+  display: inline-block;
+  color: #333;
+  width: auto;
+  padding: 0;
+  font-size: 1.7rem;
+  text-align: right;
+}
+div.container-fluid.input-background div.row span.data-element,
+div.container.input-background div.row span.data-element {
+  text-align: left;
+  font-size: 2rem;
+  display: inline-block;
+}
+div.container-fluid.input-background.planofservice div.row div[class|='col'] span.label,
+div.container.input-background.planofservice div.row div[class|='col'] span.label {
+  display: inline-block;
+  text-align: right;
+  width: 150px;
+  margin-right: 5px;
+  vertical-align: top;
+  white-space: normal;
+}
+div.container-fluid.input-background.planofservice div.row div[class|='col'] span.data-element,
+div.container.input-background.planofservice div.row div[class|='col'] span.data-element {
+  margin-top: -5px;
+  margin-left: 15px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+div.container-fluid.input-background.planofservice div.row div[class|='col'] table.table thead tr td,
+div.container.input-background.planofservice div.row div[class|='col'] table.table thead tr td {
+  font-weight: bold !important;
+}
+div.well p {
+  font-size: 2rem;
+}
+div.row.menu-container {
+  padding: 0;
+  height: 100%;
+}
+div.row.menu-container .menu-option {
+  height: auto;
+}
+div.row.menu-container .menu-option .option-inner {
+  width: 100%;
+  padding: 25px 20px 20px 20px;
+  height: auto;
+  margin: 10px auto;
+  border: 8px solid #174d6c;
+  border-radius: 4px;
+  background: #ebebeb;
+}
+div.row.menu-container .menu-option .option-inner span.glyphicon,
+div.row.menu-container .menu-option .option-inner span.fa {
+  display: block;
+  color: #1a577a;
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+div.row.menu-container .menu-option .option-inner a h2 {
+  font-weight: 400 !important;
+  font-size: 3.5rem;
+  color: #1a577a;
+  text-decoration: underline;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+div.row.menu-container .menu-option .option-inner div.well p.lead {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+div.row.menu-container .menu-option .option-inner div.well p:not(.lead) {
+  font-size: 1.8rem;
+}
+div.row.menu-container .menu-option .option-inner div.well ul li {
+  font-size: 1.8rem;
+}
+div.row.rep-container h2 {
+  margin-top: 0;
+}
+div.row.rep-container input.rep-radio {
+  margin: 37px 0 0 50%;
+}
+div.row.rep-container span.label {
+  color: #333;
+  font-size: 1.6rem;
+}
+div.row.rep-container span.data-element {
+  font-size: 2rem;
+}
+/*  MEDIA QUERIES */
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  div.container.input-background.planofservice div.row div[class|='col'] span.label {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    margin-right: 5px;
+    vertical-align: baseline;
+    white-space: normal;
+  }
+  div.container.input-background.planofservice div.row div[class|='col'] span.data-element {
+    margin-top: -5px;
+    margin-left: 15px;
+    text-align: left;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+}
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */

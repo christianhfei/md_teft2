@@ -22,9 +22,16 @@
             ,
         $routeConfig: [
             { path: '/home', component: 'home', name: 'Home' },
-            { path: '/providers', redirectTo: ['ProviderSearch'], name: 'Providers' },
-                { path: '/providers/search', component: 'providerSearch', name: 'ProviderSearch' },
-            { path: '/help', component: 'help', name: 'Help' },
+            { path: '/services', component: 'myServices', name: "Services"},
+            { path: '/information', component: 'myInfo', name: 'My Information'},
+            { path: '/representatives', component: 'myReps', name: 'My Representatives'},
+            { path: '/account', component: 'myAccount', name: "My Account"},
+            { path: '/planofservice', component: 'myPlanOfService', name: 'My Plan of Service'},
+            { path: '/password', component: 'changePassword', name: 'Change Password'},
+            { path: '/accountinfo', component: 'accountInfo', name: 'Change Account Information'},
+            { path: '/viewreps', component: 'viewReps', name: 'View My Representatives'},
+            { path: '/invitereps', component: 'inviteReps', name: 'Invite a Representative'},
+            { path: '/profile', component: 'myProfile', name: 'My Profile'},
             { path: '/**', redirectTo: ['Home'] }
         ]
     });
@@ -35,3 +42,8 @@ function getSrv(name, element) {
     element = element || '*[ng-app]';
     return angular.element(element).injector().get(name);
 }
+
+
+$routeConfig: [
+    { path: '/account', component: 'myAccount', name: "My Account"},
+]
