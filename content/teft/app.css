@@ -129,34 +129,34 @@ div#accountInfo div.well div.row div[class|='col'] span.data-element {
   display: inline-block;
 }
 div.container-fluid.input-background,
-div.container.input-background {
-  background: #ebebeb;
+div.input-background {
+  background: #fbfbfb;
   padding: 15px;
   border-radius: 4px;
 }
 div.container-fluid.input-background div.row.input-container,
-div.container.input-background div.row.input-container {
+div.input-background div.row.input-container {
   margin-bottom: 15px;
 }
 div.container-fluid.input-background div.row.input-container div[class|="col"] label,
-div.container.input-background div.row.input-container div[class|="col"] label {
+div.input-background div.row.input-container div[class|="col"] label {
   font-size: 1.7rem;
 }
 div.container-fluid.input-background div.row.input-container div[class|="col"] input.form-control,
-div.container.input-background div.row.input-container div[class|="col"] input.form-control {
+div.input-background div.row.input-container div[class|="col"] input.form-control {
   padding: 20px 12px;
   font-size: 1.8rem;
 }
 div.container-fluid.input-background div.row.input-container div[class|="col"] input.form-control option,
-div.container.input-background div.row.input-container div[class|="col"] input.form-control option {
+div.input-background div.row.input-container div[class|="col"] input.form-control option {
   font-size: 1.8rem;
 }
 div.container-fluid.input-background div.row,
-div.container.input-background div.row {
+div.input-background div.row {
   margin-bottom: 15px;
 }
 div.container-fluid.input-background div.row span.label,
-div.container.input-background div.row span.label {
+div.input-background div.row span.label {
   display: inline-block;
   color: #333;
   width: auto;
@@ -165,30 +165,31 @@ div.container.input-background div.row span.label {
   text-align: right;
 }
 div.container-fluid.input-background div.row span.data-element,
-div.container.input-background div.row span.data-element {
+div.input-background div.row span.data-element {
   text-align: left;
   font-size: 2rem;
   display: inline-block;
 }
 div.container-fluid.input-background.planofservice div.row div[class|='col'] span.label,
-div.container.input-background.planofservice div.row div[class|='col'] span.label {
+div.input-background.planofservice div.row div[class|='col'] span.label {
   display: inline-block;
   text-align: right;
-  width: 150px;
+  width: 145px;
   margin-right: 5px;
   vertical-align: top;
   white-space: normal;
 }
 div.container-fluid.input-background.planofservice div.row div[class|='col'] span.data-element,
-div.container.input-background.planofservice div.row div[class|='col'] span.data-element {
+div.input-background.planofservice div.row div[class|='col'] span.data-element {
   margin-top: -5px;
   margin-left: 15px;
   display: inline-block;
   text-align: left;
+  white-space: normal;
   vertical-align: top;
 }
 div.container-fluid.input-background.planofservice div.row div[class|='col'] table.table thead tr td,
-div.container.input-background.planofservice div.row div[class|='col'] table.table thead tr td {
+div.input-background.planofservice div.row div[class|='col'] table.table thead tr td {
   font-weight: bold !important;
 }
 div.well p {
@@ -254,7 +255,7 @@ div.row.rep-container span.data-element {
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  div.container.input-background.planofservice div.row div[class|='col'] span.label {
+  div.input-background.planofservice div.row div[class|='col'] span.label {
     display: inline-block;
     text-align: right;
     width: 40%;
@@ -262,7 +263,7 @@ div.row.rep-container span.data-element {
     vertical-align: baseline;
     white-space: normal;
   }
-  div.container.input-background.planofservice div.row div[class|='col'] span.data-element {
+  div.input-background.planofservice div.row div[class|='col'] span.data-element {
     margin-top: -5px;
     margin-left: 15px;
     text-align: left;
