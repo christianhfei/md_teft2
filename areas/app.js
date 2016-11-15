@@ -32,6 +32,8 @@
             { path: '/viewreps', component: 'viewReps', name: 'View My Representatives'},
             { path: '/invitereps', component: 'inviteReps', name: 'Invite a Representative'},
             { path: '/profile', component: 'myProfile', name: 'My Profile'},
+            { path: '/clientregistration', component: 'clientRegister', name: 'Client Registration' },
+            { path: '/repregistration', component: 'repRegister', name: 'Representative Registration' },
             { path: '/**', redirectTo: ['Home'] }
         ]
     });

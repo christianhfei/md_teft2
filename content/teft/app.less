@@ -2,12 +2,19 @@
 @mainBlue: #2C96D3;
 @darkerBlue: darken(@mainBlue, 6%);
 
+.footerBoxShadow{
+  -webkit-box-shadow: 0px -1px 17px 0px rgba(0,0,0,0.12);
+  -moz-box-shadow: 0px -1px 17px 0px rgba(0,0,0,0.12);
+  box-shadow: 0px -1px 17px 0px rgba(0,0,0,0.12);
+}
+
 html{
   font-size: 62.5% !important;
 }
 
 body{
-  font-size: 1.6rem
+  font-size: 1.6rem;
+  margin-bottom: 65px;
 }
 
 a.btn.btn-default.btn-lg.back-button{
@@ -24,9 +31,25 @@ h1{
 }
 
 
-input[type='radio']{
+input[type='checkbox']{
   width: 2.5rem;
   height: 2.5rem;
+}
+
+label{
+  font-size: 1.7rem;
+  float:right;
+  vertical-align: baseline !important;
+  text-align: right;
+
+}
+input.form-control, select.form-control{
+  padding: 20px 12px;
+  font-size: 1.8rem;
+
+}
+option{
+  font-size: 1.8rem;
 }
 
 span{
@@ -39,7 +62,24 @@ span{
   }
 }
 
-
+footer.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 9998;
+  background-color: #f5f5f5;
+  .footerBoxShadow;
+  div.container-fluid{
+    p.text-muted{
+      margin: 0;
+      &:first-of-type{
+        margin: 8px 0 0 0;
+        font-weight: bold;
+      }
+    }
+  }
+}
 
 div[data-toggle="buttons"] label.active{
     color: #7AA3CC;
@@ -86,6 +126,19 @@ nav.navbar.navbar-default.navbar-fixed-top{
     text-shadow: none;
     &:hover{
       color: white;
+    }
+  }
+
+  ul.nav.navbar-nav.navbar-right{
+    li{
+      a{
+        font-size: 1.8rem;
+        color: white;
+        font-weight: bold;
+        span.fa{
+          font-weight: normal;
+        }
+      }
     }
   }
 }
@@ -164,16 +217,7 @@ div.container-fluid.input-background, div.input-background{
   div.row.input-container{
     margin-bottom: 15px;
     div[class|="col"]{
-      label{
-        font-size: 1.7rem;
-      }
-      input.form-control{
-        padding: 20px 12px;
-        font-size: 1.8rem;
-        option{
-          font-size: 1.8rem;
-        }
-      }
+
 
     }
 
@@ -328,6 +372,11 @@ div.row.rep-container{
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  label{
+    text-align: left;
+    float: none;
+  }
+
   div.input-background.planofservice{
       div.row{
         div[class|='col']{

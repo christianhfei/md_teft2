@@ -1,8 +1,14 @@
+.footerBoxShadow {
+  -webkit-box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
+}
 html {
   font-size: 62.5% !important;
 }
 body {
   font-size: 1.6rem;
+  margin-bottom: 65px;
 }
 a.btn.btn-default.btn-lg.back-button {
   margin-top: 15px !important;
@@ -14,9 +20,23 @@ h1 {
   font-size: 4.4rem;
   font-weight: 700;
 }
-input[type='radio'] {
+input[type='checkbox'] {
   width: 2.5rem;
   height: 2.5rem;
+}
+label {
+  font-size: 1.7rem;
+  float: right;
+  vertical-align: baseline !important;
+  text-align: right;
+}
+input.form-control,
+select.form-control {
+  padding: 20px 12px;
+  font-size: 1.8rem;
+}
+option {
+  font-size: 1.8rem;
 }
 span.label {
   color: #333;
@@ -24,6 +44,24 @@ span.label {
 }
 span.data-element {
   font-size: 2rem;
+}
+footer.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 9998;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
+}
+footer.footer div.container-fluid p.text-muted {
+  margin: 0;
+}
+footer.footer div.container-fluid p.text-muted:first-of-type {
+  margin: 8px 0 0 0;
+  font-weight: bold;
 }
 div[data-toggle="buttons"] label.active {
   color: #7AA3CC;
@@ -69,6 +107,14 @@ nav.navbar.navbar-default.navbar-fixed-top a.navbar-brand {
 }
 nav.navbar.navbar-default.navbar-fixed-top a.navbar-brand:hover {
   color: white;
+}
+nav.navbar.navbar-default.navbar-fixed-top ul.nav.navbar-nav.navbar-right li a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+}
+nav.navbar.navbar-default.navbar-fixed-top ul.nav.navbar-nav.navbar-right li a span.fa {
+  font-weight: normal;
 }
 div.info-panel {
   background: #ebebeb;
@@ -137,19 +183,6 @@ div.input-background {
 div.container-fluid.input-background div.row.input-container,
 div.input-background div.row.input-container {
   margin-bottom: 15px;
-}
-div.container-fluid.input-background div.row.input-container div[class|="col"] label,
-div.input-background div.row.input-container div[class|="col"] label {
-  font-size: 1.7rem;
-}
-div.container-fluid.input-background div.row.input-container div[class|="col"] input.form-control,
-div.input-background div.row.input-container div[class|="col"] input.form-control {
-  padding: 20px 12px;
-  font-size: 1.8rem;
-}
-div.container-fluid.input-background div.row.input-container div[class|="col"] input.form-control option,
-div.input-background div.row.input-container div[class|="col"] input.form-control option {
-  font-size: 1.8rem;
 }
 div.container-fluid.input-background div.row,
 div.input-background div.row {
@@ -255,6 +288,10 @@ div.row.rep-container span.data-element {
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  label {
+    text-align: left;
+    float: none;
+  }
   div.input-background.planofservice div.row div[class|='col'] span.label {
     display: inline-block;
     text-align: right;
