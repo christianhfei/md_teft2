@@ -3,6 +3,19 @@
         #serviceDetails .row {
             margin-bottom: 20px;
         }
+
+        .fc-content {
+
+        }
+        .fc-time {
+            display: block;
+        }
+        .fc-title {
+            display: block;
+        }
+        .fc-row.fc-week.fc-widget-content {
+            min-height: 185px;
+        }
     </style>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -114,11 +127,13 @@
                     <hr>
                     <div class="row">
                         <div class="col-xs-12 text-right">
-                            <button type="button" class="btn btn-default btn-lg"><span class="fa fa-flag"></span> Flag For Review</button>
+                            <button type="button" class="btn btn-default btn-lg" ng-click="model.createNewServiceFlag()"><span class="fa fa-flag"></span> Flag For Review</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <advanced-search></advanced-search>
+    <new-service-flag></new-service-flag>
 </standard-layout>

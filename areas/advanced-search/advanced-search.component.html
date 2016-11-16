@@ -1,0 +1,108 @@
+<div id="advancedSearchModal" class="modal fade in" aria-hidden="false" style="display: none;">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Advanced Search</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <fieldset>
+            <br><br>
+            <div class="form-group">
+              <div class="col-xs-4 control-label">
+                <label>Provider Agency:</label>
+              </div>
+              <div class=" col-xs-5">
+                <select class="form-control">
+                  <option value="All">All</option>
+                  <option value="Telephone">Tru-Care Providers</option>
+                  <option value="Manual">Adult Day Care</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-xs-4 control-label">
+                <label>Provider Staff:</label>
+              </div>
+              <div class=" col-xs-5">
+                <select class="form-control">
+                  <option value="All">All</option>
+                  <option value="Telephone">Candace Kind</option>
+                  <option value="Manual">Gladice Tuhelp</option>
+                </select>
+              </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+              <div class="col-xs-4 control-label">
+                <label>Service Date Range:</label>
+              </div>
+              <div class="col-xs-6">
+                <input class="form-control col-xs-4" style="display: inline-block; width: 150px;" type="text" id="fromDate" placeholder="mm/dd/yyyy"/>
+                <span class="col-xs-2" style="margin-top: 6px; text-align: center">to</span>
+                <input class="form-control col-xs-4" style="display: inline-block; width: 150px;" type="text" id="toDate" placeholder="mm/dd/yyyy"/>
+              </div>
+            </div>
+            <br><br>
+
+
+            <div class="form-group">
+              <div class="col-xs-4 control-label">
+                <label>Clock-in Method:</label>
+              </div>
+              <div class=" col-xs-5">
+                <select class="form-control">
+                  <option value="All">All</option>
+                  <option value="Telephone">Telephone</option>
+                  <option value="Manual">Manual</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-xs-4 control-label">
+                <label>Payment Status:</label>
+              </div>
+              <div class=" col-xs-5">
+                <select class="form-control">
+                  <option value="All">All</option>
+                  <option value="In Process">In Process</option>
+                  <option value="Telephone">Paid</option>
+                  <option value="Manual">Claim Rejected</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-xs-4 control-label">
+                <label>Flag Status:</label>
+              </div>
+              <div class=" col-xs-5">
+                <select class="form-control">
+                  <option value="All">All</option>
+                  <option value="Flagged">Pending Review</option>
+                  <option value="Reviewed">Under Review</option>
+                  <option value="CompletedNoAction">Completed - No further action
+                    required
+                  </option>
+                  <option value="CompletedReportable">Completed - Escalated to a
+                    Reportable Event
+                  </option>
+                </select>
+              </div>
+            </div>
+            <br><br>
+
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default btn-lg" type="button" ng-click="model.closeModal()">Cancel</button>
+        <button class="btn btn-success btn-lg" type="button" ng-click="model.submitSearch()">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="advancedSearchModalBg" class="modal-backdrop fade in" style="display: none;"></div>
