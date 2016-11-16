@@ -3795,7 +3795,7 @@ var Grid = FC.Grid = Class.extend(ListenerMixin, MouseIgnorerMixin, {
 	// Computes HTML classNames for a single-day element
 	getDayClasses: function(date) {
 		var view = this.view;
-		var today = view.calendar.getNow();
+		var today = "2016-01-08"; //view.calendar.getNow();
 		var classes = [ 'fc-' + dayIDs[date.day()] ];
 
 		if (

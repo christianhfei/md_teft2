@@ -1,0 +1,95 @@
+<style type="text/css">
+
+    .slick-dots li button:before {
+        color: #494949;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #05579a;
+    }
+
+    .slick-dots li button:before,
+    .slick-dots li.slick-active button:before {
+        font-size: 50px;
+    }
+</style>
+<div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="model.showModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">New Flag</h3>
+            </div>
+            <div class="modal-body">
+                <div id="flag-wizard">
+                    <div style="min-height: 300px;">
+                        <div class="well">
+                            <p>
+                                It is important to us to ensure your service information is accurate. If you do not
+                                believe the service in questions is valid, your information will be sent to DHMH for
+                                review.
+                            </p>
+                        </div>
+                    </div>
+                    <div style="min-height: 300px;">
+                        <div class="well">
+                            <p>
+                                Please provider some details about the service in question.
+                            </p>
+                        </div>
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="form-group">
+                                    <div class="col-xs-offset-1 col-xs-4 control-label">
+                                        <label>Why are you flagging this service?</label>
+                                    </div>
+                                    <div class=" col-xs-5">
+                                        <select class="form-control">
+                                            <option value="All">All</option>
+                                            <option value="In Process">In Process</option>
+                                            <option value="Telephone">Paid</option>
+                                            <option value="Manual">Claim Rejected</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-offset-1 col-xs-4 control-label">
+                                        <label>Please provide additional information?</label>
+                                    </div>
+                                    <div class=" col-xs-5">
+                                        <textarea class="form-control" id="" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div style="min-height: 300px;">
+                        <br><br><br>
+                        <div class="well">
+                            <p style="text-align: center">
+                                The service information has been flagged and sent for review by DHMH. Thank you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button id="prevFlagStep" class="btn btn-default" type="button" ng-click="model.prevFlagStep()"
+                                style="float:left"><span class="fa fa-chevron-left"></span>&nbsp;Previous
+                        </button>
+                        <button id="nextFlagStep" class="btn btn-default" type="button" ng-click="model.nextFlagStep()"
+                                style="float:right">Next&nbsp;<span class="fa fa-chevron-right"></span></button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="text-align: left">
+                <button id="cancelFlag" class="btn btn-danger btn-lg" type="button" ng-click="model.closeModal()">Cancel</button>
+                <button id="submitFlag" class="btn btn-success btn-lg" type="button" style="float: right; display: none;" ng-click="model.submitFlag()">Submit</button>
+                <button id="closeFlag" class="btn btn-primary btn-lg" type="button" style="float: right; display: none;" ng-click="model.closeModal()">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade in" ng-show="model.showModal"></div>
