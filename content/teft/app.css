@@ -1,3 +1,18 @@
+.cardGradient {
+  background: #e2e2e2;
+  background: -moz-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(35%, #e2e2e2), color-stop(45%, #dbdbdb), color-stop(66%, #d1d1d1), color-stop(100%, #d1d1d1));
+  background: -webkit-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  background: -o-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  background: -ms-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  background: linear-gradient(to bottom, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2e2e2', endColorstr='#d1d1d1', GradientType=0);
+}
+.generalBoxShadow {
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+}
 .footerBoxShadow {
   -webkit-box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
@@ -238,11 +253,22 @@ div.row.menu-container .menu-option {
 div.row.menu-container .menu-option .option-inner {
   width: 100%;
   padding: 25px 20px 20px 20px;
-  height: auto;
+  height: 380px;
+  min-width: 250px;
   margin: 10px auto;
-  border: 8px solid #174d6c;
+  border: 2px solid #b3b3b3;
   border-radius: 4px;
-  background: #ebebeb;
+  background: #e2e2e2;
+  background: -moz-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(35%, #e2e2e2), color-stop(45%, #dbdbdb), color-stop(66%, #d1d1d1), color-stop(100%, #d1d1d1));
+  background: -webkit-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  background: -o-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  background: -ms-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  background: linear-gradient(to bottom, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2e2e2', endColorstr='#d1d1d1', GradientType=0);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
 }
 div.row.menu-container .menu-option .option-inner span.glyphicon,
 div.row.menu-container .menu-option .option-inner span.fa {
@@ -256,6 +282,7 @@ div.row.menu-container .menu-option .option-inner a h2 {
   font-size: 3.5rem;
   color: #1a577a;
   text-decoration: underline;
+  word-break: normal;
   margin-bottom: 25px;
   margin-top: 0;
 }
@@ -292,6 +319,9 @@ div.row.rep-container span.data-element {
     text-align: left;
     float: none;
   }
+  div.row.menu-container .menu-option .option-inner {
+    height: auto;
+  }
   div.input-background.planofservice div.row div[class|='col'] span.label {
     display: inline-block;
     text-align: right;
@@ -309,4 +339,9 @@ div.row.rep-container span.data-element {
   }
 }
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  div.row.menu-container .menu-option .option-inner {
+    height: auto;
+  }
+}
 /* Custom, iPhone Retina */

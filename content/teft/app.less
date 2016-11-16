@@ -2,6 +2,23 @@
 @mainBlue: #2C96D3;
 @darkerBlue: darken(@mainBlue, 6%);
 
+.cardGradient{
+  background: rgba(226,226,226,1);
+background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(35%, rgba(226,226,226,1)), color-stop(45%, rgba(219,219,219,1)), color-stop(66%, rgba(209,209,209,1)), color-stop(100%, rgba(209,209,209,1)));
+background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
+background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
+background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
+background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#d1d1d1', GradientType=0 );
+}
+
+.generalBoxShadow{
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  -moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+}
+
 .footerBoxShadow{
   -webkit-box-shadow: 0px -1px 17px 0px rgba(0,0,0,0.12);
   -moz-box-shadow: 0px -1px 17px 0px rgba(0,0,0,0.12);
@@ -294,11 +311,14 @@ div.row.menu-container{
     .option-inner{
       width: 100%;
       padding: 25px 20px 20px 20px;
-      height: auto;
+      height: 380px;
+      min-width: 250px;
       margin: 10px auto;
-      border: 8px solid #174d6c;
+      border: 2px solid darken(#cccccc, 10%);
       border-radius: 4px;
-      background: lighten(#CCC, 12%);
+      //background: lighten(#CCC, 12%);
+      .cardGradient;
+      .generalBoxShadow;
       span.glyphicon, span.fa{
         display: block;
         color: darken(@darkerBlue, 15%);
@@ -313,6 +333,7 @@ div.row.menu-container{
           font-size: 3.5rem;
           color: darken(@darkerBlue, 15%);
           text-decoration: underline;
+          word-break: normal;
           margin-bottom: 25px;
           margin-top: 0;
         }
@@ -377,6 +398,13 @@ div.row.rep-container{
     float: none;
   }
 
+  div.row.menu-container{
+    .menu-option
+      .option-inner{
+        height: auto;
+      }
+    }
+
   div.input-background.planofservice{
       div.row{
         div[class|='col']{
@@ -405,6 +433,13 @@ div.row.rep-container{
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+  div.row.menu-container{
+    .menu-option
+      .option-inner{
+        height: auto;
+      }
+    }
+
 
 }
 
