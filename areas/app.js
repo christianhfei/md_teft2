@@ -23,6 +23,7 @@
         $routeConfig: [
             { path: '/home', component: 'home', name: 'Home' },
             { path: '/services', component: 'myServices', name: "Services"},
+            { path: '/searchresults', component: 'advancedSearchResults', name: "Advanced Search Results"},
             { path: '/information', component: 'myInfo', name: 'My Information'},
             { path: '/representatives', component: 'myReps', name: 'My Representatives'},
             { path: '/account', component: 'myAccount', name: "My Account"},

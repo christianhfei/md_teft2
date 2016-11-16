@@ -14,6 +14,7 @@
             setTimeout(function(){
                 $('#servicesCalendar').fullCalendar({
                     "defaultDate" : "2016-01-08",
+                    "defaultView" : "listYear",
                     "customButtons": {
                         "showFlaggedServices": {
                             "text": 'Show Only Flagged Services',
@@ -22,7 +23,7 @@
                             }
                         },
                         "advancedSearch": {
-                            "text": 'Advanced Search',
+                            "text": 'New Advanced Search',
                             click: function() {
                                 $scope.performAdvancedSearch();
                             }
@@ -35,9 +36,9 @@
                         }
                     },
                     "header" : {
-                        "left":   'prev title next',
-                        "center": 'advancedSearch showFlaggedServices',
-                        "right":  'month,agendaWeek,listDay'
+                        "left":   'advancedSearch showFlaggedServices',
+                        "center": '',
+                        "right":  ''
                     },
                     "today" : "2016-01-08",
                     "views": {
@@ -55,7 +56,7 @@
                     },
                     "viewRender": function(view, element) {
 
-                        if (view.name == "listDay") {
+                        if (view.name == "listDay" || view.name == "listYear") {
                             $(".fc-view-container").addClass("col-xs-6");
                             $("#serviceDetails").show();
                         } else {
@@ -253,8 +254,8 @@
         }
     };
 
-    module.component("myServices", {
-        templateUrl: "areas/services/services.html",
+    module.component("advancedSearchResults", {
+        templateUrl: "areas/advanced-search-results/advanced-search-results.html",
         controllerAs: "model",
         controller: ["$scope", "$rootScope", controller]
 

@@ -2,7 +2,7 @@
     "use strict";
     var module = angular.module("macwisWebApp");
 
-    var controller = function($scope, $rootScope) {
+    var controller = function($scope, $rootScope, $location) {
         var model = this;
         model.showModal = false;
 
@@ -25,11 +25,16 @@
             $("body").css("overflow-y", "auto");
         }
 
+        model.submitAdvancedSearch = function() {
+            model.closeModal();
+            $location.path("/searchresults");
+        }
+
     }
 
     module.component("advancedSearch", {
         templateUrl : "areas/advanced-search/advanced-search.component.html",
         controllerAs: 'model',
-        controller  :["$scope", "$rootScope", controller]
+        controller  :["$scope", "$rootScope","$location", controller]
     });
 }())
