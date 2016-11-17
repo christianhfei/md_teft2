@@ -15,6 +15,9 @@ input.required,
 select.required {
   background: rgba(244, 248, 42, 0.39) !important;
 }
+.btn.btn-warning {
+  background: linear-gradient(to bottom, #cc0000 0%, #cc0000 100%);
+}
 label.required::after {
   content: "*";
   position: relative;
@@ -221,6 +224,10 @@ div.input-background div.row span.data-element {
   text-align: left;
   font-size: 1.6rem;
   display: inline-block;
+}
+div.container-fluid.input-background.planofservice div.row div[class|='col'] h2,
+div.input-background.planofservice div.row div[class|='col'] h2 {
+  margin-top: 0;
 }
 div.container-fluid.input-background.planofservice div.row div[class|='col'] span.label,
 div.input-background.planofservice div.row div[class|='col'] span.label {
