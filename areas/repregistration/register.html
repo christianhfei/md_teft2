@@ -8,11 +8,11 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
           <label for="fName" class="">First Name:</label>
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
-          <input type="text" class='form-control' id='fName'>
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+          <span class="data-element">John</span>
         </div>
       </div>
     </div>
@@ -20,11 +20,11 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
           <label for="lName" class="">Last Name:</label>
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
-          <input type="text" class='form-control' id='lName'>
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+          <span class="data-element">Doe</span>
         </div>
       </div>
     </div>
@@ -32,11 +32,11 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
           <label for="fName" class="">Date of Birth:</label>
         </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-2">
-          <input type="text" class='form-control' id='fName'>
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6">
+          <span class="data-element">08/12/1991</span>
         </div>
       </div>
     </div>
@@ -44,10 +44,10 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="fName" class="">Gender:</label>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="fName" class="required">Gender:</label>
         </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-5">
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6">
           <span class="radio-inline">
             <label for="male">
               <input type="radio" id="male"> Male
@@ -62,14 +62,15 @@
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="ssn" class="">SSN:</label>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="manumber" class="">Paraticipant's MA#:</label>
         </div>
-        <div class="col-xs-12 col-md-8 col-sm-8 col-lg-2">
-          <input type="text" class='form-control' id='ssn'>
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-4">
+          <span class="data-element">0000761147692</span>
         </div>
       </div>
     </div>
@@ -77,23 +78,11 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="manumber" class="">MA#:</label>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="phoneType" class="required">Phone Type:</label>
         </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-2">
-          <input type="text" class='form-control' id='manumber'>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
-      <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="phoneType" class="">Phone Type:</label>
-        </div>
-        <div class="col-xs-12 col-md-6 col-sm-6 col-lg-3">
-          <select name="phoneType" id="phoneType" class="form-control">
+        <div class="col-xs-12 col-md-6 col-sm-6 col-lg-4">
+          <select name="phoneType" id="phoneType" class="form-control required">
             <option value="null">&nbsp;</option>
             <option value="home">Home</option>
             <option value="Cell">Cell</option>
@@ -107,23 +96,11 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="phonenum" class="">Phone Number:</label>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="phonenum" class="required">Phone Number:</label>
         </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-2">
-          <input type="text" class='form-control' id='phonenum'>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
-      <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="username" class="">Username:</label>
-        </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-2">
-          <input type="text" class='form-control' id='username'>
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-4">
+          <input type="text" class='required form-control' id='phonenum'>
         </div>
       </div>
     </div>
@@ -131,23 +108,11 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="password" class="">Password:</label>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="username" class="required">Username:</label>
         </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-2">
-          <input type="password" class='form-control' id='password'>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
-      <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="confirmpassword" class="">Confirm Password:</label>
-        </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-2">
-          <input type="password" class='form-control' id='confirmpassword'>
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-4">
+          <input type="text" class='required form-control' id='username'>
         </div>
       </div>
     </div>
@@ -155,23 +120,13 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="emailaddress" class="">Email Address:</label>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="password" class="required">Password:</label>
+
         </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-2">
-          <input type="email" class='form-control' id='emailaddress'>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
-      <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="confirmemailaddress" class=" ">Confirm Email Address:</label>
-        </div>
-        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-2">
-          <input type="email" class='form-control' id='confirmemailaddress'>
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-4">
+          <input type="password" class='required form-control' id='password'>
+          <p class="help-block">Must be 8 characters long and include at least one number.</p>
         </div>
       </div>
     </div>
@@ -179,11 +134,47 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
       <div class="form-group">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <label for="confirmemailaddress" class=" ">Preferred Method of Contact:</label>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="confirmpassword" class="required">Confirm Password:</label>
         </div>
-        <div class="col-xs-12 col-md-6 col-sm-6 col-lg-3">
-          <select name="methodOfContact" id="methodOfContact" class="form-control">
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-4">
+          <input type="password" class='required form-control' id='confirmpassword'>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
+      <div class="form-group">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="emailaddress" class="required">Email Address:</label>
+        </div>
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-4">
+          <input type="email" class='required form-control' id='emailaddress'>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
+      <div class="form-group">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="confirmemailaddress" class="required">Confirm Email Address:</label>
+        </div>
+        <div class="col-xs-12 col-md-6 col-sm-8 col-lg-4">
+          <input type="email" class='required form-control' id='confirmemailaddress'>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-horizontal">
+      <div class="form-group">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <label for="confirmemailaddress" class="required">Preferred Method of Contact:</label>
+        </div>
+        <div class="col-xs-12 col-md-6 col-sm-6 col-lg-4">
+          <select name="methodOfContact" id="methodOfContact" class="form-control required">
             <option value="null">&nbsp;</option>
             <option value="all">All</option>
             <option value="email">Email</option>
@@ -195,4 +186,11 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <hr>
+    <div class="pull-right">
+      <a href="#/" class="btn btn-success btn-lg">Submit</a>
+    </div>
+  </div>
+  <br>
 </standard-layout>
