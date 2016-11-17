@@ -56,6 +56,10 @@
     <script src='areas/service-flags/new-service-flag.component.js'></script>
     <!-- AREA: Advanced Search Results -->
     <script src='areas/advanced-search-results/advanced-search-results.js'></script>
+    <!-- AREA:Service Details -->
+    <script src='areas/service-details/service-details.js'></script>
+    <!-- AREA:Service Details -->
+    <script src='areas/service-details-flagged/service-details-flagged.js'></script>
 
 
     <!-- SHARED -->
@@ -91,6 +95,7 @@
     <link href="scripts/vendor/slickjs/slick.css" rel="stylesheet"/>
     <link href="scripts/vendor/slickjs/slick-theme.css" rel="stylesheet"/>
     <link href="content/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="content/overrides/fullcalendar.css" rel="stylesheet"/>
     <link href="content/teft/app.css" rel="stylesheet"/>
 
 
@@ -100,9 +105,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body style="padding-top: 40px;">
+<body style="padding-top: 50px;">
     <div class="container-fluid">
-        <div class="col-xs-offset-2 col-xs-8">
+        <div class="col-md-offset-2 col-md-8">
             <div id="main-content" ng-app="macwisWebApp">
                 <macwis-web-app></macwis-web-app>
             </div>
@@ -115,7 +120,7 @@
           <p class="text-muted">Hi Abigail! Today is January, 1st 2016</p>
         </div>
         <div class="pull-right">
-          <div class="col-xs-9">
+          <div class="col-md-9">
             <p class="text-muted pull-right">
               As of January 8, 2016, your Plan of Services is active and
               eligible to receive services until January 7, 2017.

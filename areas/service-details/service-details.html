@@ -1,0 +1,183 @@
+<div id="serviceDetails" class="col-md-6" style="display: none;">
+    <h2 style="margin-top: 0;">Service Details</h2>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <span class="h2">January - Friday 1, 2016</span>
+        </div>
+        <div class="row">
+            <span class="h3" style="font-weight: bold;">7:45 am</span>&nbsp;&nbsp;-&nbsp;&nbsp;
+            <span class="h3" style="font-weight: bold;">1:10 pm</span>&nbsp;&nbsp;
+            <span class="h4">
+                            (Total Duration: 5&nbsp;<small>hrs</small>&nbsp;&nbsp;25&nbsp;<small>min</small>)
+                        </span>
+        </div>
+        <div class="row">
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                                <strong>Service Provided:</strong>
+                            </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               Personal Assistance (Shared Attendant)
+                           </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Provider Agency Name:</strong>
+                           </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               Tru-Care Providers
+                           </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Provider Staff Name:</strong>
+                           </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               Candace Kind
+                           </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Payment Status:</strong>
+                           </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               Paid
+                           </span>
+            </div>
+            <div class="col-xs-12">
+                <span class="h4">
+                    <small><strong>Paid:</strong> Claims that have been paid.</small><br>
+                    <small><strong>Rejected:</strong> Claims that have been rejected and not paid.</small><br>
+                    <small><strong>In-Progress:</strong> Claims that are still pending to be paid or rejected.</small>
+                </span>
+            </div>
+        </div>
+        <div id="flagStatus" class="row" style="display: none;">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Flag Status:</strong>
+                           </span>
+        </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               Flag Reviewed  (No Action Required)
+                           </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Flag Reason:</strong>
+                           </span>
+        </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                                Provider did not show up/clock in/out time is inaccurate
+                           </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>My Flag Comments:</strong>
+                           </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                                I do not recall this service ever happening.
+                           </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Service Clock-In Method:</strong>
+                           </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               Telephone
+                           </span>
+            </div>
+            <div class="col-xs-12">
+                <span class="h4">
+                    <small><strong>Telephone:</strong> A service that has been initiated and closed using an IVR.</small><br>
+                    <small><strong>Manual:</strong> A service which has been manually entered in the ISAS system</small>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Number of Units Billed:</strong>
+                           </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               17
+                           </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Was OTP Used?</strong>
+                           </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               Yes
+                           </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                           <span class="h4">
+                               <strong>Other participants who shared this service:</strong>
+                           </span>
+            </div>
+            <div class="col-xs-6">
+                           <span class="h4">
+                               Malcolm Wendel, Beverly Green
+                           </span>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0;">
+            <div class="well" style="margin-bottom: 0;">
+                <span class="fa fa-info-circle"></span> If you see any issues with any information, or would like to
+                report this service for any reason, please
+                click “Flag for Review” to send this service instance to DHMH.
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+            <div class="col-xs-12 text-right">
+                <button id="flagButton" type="button" class="btn btn-default btn-lg" ng-click="model.createNewServiceFlag()"><span
+                        class="fa fa-flag"></span> Flag For Review
+                </button>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <button id="ServiceDetailsBackButton" class="btn btn-primary btn-lg" style="display: none;"><span class="fa fa-chevron-left"></span>  Back</button>
+    <new-service-flag></new-service-flag>
+</div>

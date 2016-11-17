@@ -21,7 +21,7 @@
             </div>
             <div class="modal-body">
                 <div id="flag-wizard">
-                    <div style="min-height: 300px;">
+                    <div style="min-height: 350px;">
                         <div class="well">
                             <p>
                                 It is important to us to ensure your service information is accurate. If you do not
@@ -30,7 +30,7 @@
                             </p>
                         </div>
                     </div>
-                    <div style="min-height: 300px;">
+                    <div style="min-height: 350px;">
                         <div class="well">
                             <p>
                                 Please provider some details about the service in question.
@@ -43,11 +43,37 @@
                                         <label>Why are you flagging this service?</label>
                                     </div>
                                     <div class=" col-xs-5">
-                                        <select class="form-control">
-                                            <option value="All">All</option>
-                                            <option value="In Process">In Process</option>
-                                            <option value="Telephone">Paid</option>
-                                            <option value="Manual">Claim Rejected</option>
+                                        <select required="" class="form-control">
+                                            <option></option>
+                                            <optgroup label="Life and Safety">
+                                                <option>Quality of Care concerns</option>
+                                            </optgroup>
+                                            <optgroup label="Provider Issues">
+                                                <option>
+                                                    Provider did not show up/clock in/out time is inaccurate
+                                                </option>
+                                                <option>
+                                                    Provider took the OTP
+                                                </option>
+                                                <option>
+                                                    Wrong staff listed on the service
+                                                </option>
+                                                <option>
+                                                    Wrong agency listed on the service
+                                                </option>
+                                                <option>
+                                                    Clarification about missing time
+                                                </option>
+                                            </optgroup>
+                                            <optgroup label="POS Issues">
+                                                <option>
+                                                    Hospitalized during service time
+                                                </option>
+                                                <option>
+                                                    Question about why service was adjusted
+                                                </option>
+                                            </optgroup>
+                                            <option>Other (please describe in comments)</option>
                                         </select>
                                     </div>
                                 </div>
@@ -63,19 +89,18 @@
                             </fieldset>
                         </form>
                     </div>
-                    <div style="min-height: 300px;">
+                    <div style="min-height: 350px;">
                         <br><br><br>
-                        <div class="well">
-                            <p style="text-align: center">
-                                The service information has been flagged and sent for review by DHMH. Thank you.
-                            </p>
-                        </div>
+                                <div class="col-xs-offset-2 col-xs-8">
+                                    <span class="h2"><strong>Success!</strong></span><br><br>
+                                    <span class="h3">The service information has been flagged and sent to DHMH for review. <br><br>Thank you.</span>
+                                </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <button id="prevFlagStep" class="btn btn-default" type="button" ng-click="model.prevFlagStep()"
-                                style="float:left"><span class="fa fa-chevron-left"></span>&nbsp;Previous
+                                style="float:left; display: none;"><span class="fa fa-chevron-left"></span>&nbsp;Previous
                         </button>
                         <button id="nextFlagStep" class="btn btn-default" type="button" ng-click="model.nextFlagStep()"
                                 style="float:right">Next&nbsp;<span class="fa fa-chevron-right"></span></button>

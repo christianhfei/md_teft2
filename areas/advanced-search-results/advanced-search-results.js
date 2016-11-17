@@ -13,6 +13,41 @@
         $scope.init = function() {
             setTimeout(function(){
                 $('#servicesCalendar').fullCalendar({
+                    windowResize: function(view) {
+
+                        if ($(window).width() < 992){
+                            $("#mobileServicesContainer").slick(
+                                {
+                                    swipeToSlide : false,
+                                    touchMove: false,
+                                    arrows: false,
+                                    dots: false,
+                                    infinite: false,
+                                    adaptiveHeight: true
+                                }
+                            );
+                            $("#ServiceDetailsBackButton").show();
+
+                            $scope.slickEnabled = true;
+
+                            $("#serviceDetails").show();
+                        } else {
+                            if ($scope.slickEnabled) {
+                                $("#mobileServicesContainer").slick("unslick");
+                                $("#ServiceDetailsBackButton").hide();
+                                $("back-button").show();
+                                $scope.slickEnabled = false;
+                            }
+                        }
+                    },
+                    eventClick: function(calEvent, jsEvent, view) {
+                        if ($scope.slickEnabled) {
+                            $("#mobileServicesContainer").slick("slickNext");
+                            $("back-button").hide();
+                        }
+                    },
+                    height: 850,
+                    "allDaySlot" : false,
                     "defaultDate" : "2016-01-08",
                     "defaultView" : "listYear",
                     "customButtons": {
@@ -57,10 +92,10 @@
                     "viewRender": function(view, element) {
 
                         if (view.name == "listDay" || view.name == "listYear") {
-                            $(".fc-view-container").addClass("col-xs-6");
+                            $(".fc-view-container").addClass("col-md-6");
                             $("#serviceDetails").show();
                         } else {
-                            $(".fc-view-container").removeClass("col-xs-6");
+                            $(".fc-view-container").removeClass("col-md-6");
                             $("#serviceDetails").hide();
                         }
                     },
@@ -219,6 +254,14 @@
                    $rootScope.$broadcast('performAdvancedSearch', true);
                });
 
+                $(window).resize();
+
+                $("#ServiceDetailsBackButton").on("click", function(){
+                    $("#mobileServicesContainer").slick("slickPrev");
+                    setTimeout(function(){
+                        $("back-button").show();
+                    },500);
+                });
             },400)
 
 

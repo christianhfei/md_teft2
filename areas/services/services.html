@@ -23,128 +23,15 @@
             padding-right: 0px;
         }
     </style>
-    <back-button url-link="Home" button-label="Home"></back-button>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h1>My Services</h1>
-            <div id='servicesCalendar'></div>
-            <div id="serviceDetails" class="col-xs-6" style="display: none;">
-                <h2 style="margin-top: 0;">Service Details</h2>
-                <hr>
-                <div class="container-fluid">
-                    <div class="row">
-                        <span class="h2">January - Friday 1, 2016</span>
-                    </div>
-                    <div class="row">
-                        <span class="h3" style="font-weight: bold;">7:45 am</span>&nbsp;&nbsp;-&nbsp;&nbsp;
-                        <span class="h3" style="font-weight: bold;">1:10 pm</span>&nbsp;&nbsp;
-                        <span class="h4">
-                            (Total Duration: 5&nbsp;<small>hrs</small>&nbsp;&nbsp;25&nbsp;<small>min</small>)
-                        </span>
-                    </div>
-                    <div class="row">
-                        <hr>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                           <span class="h4">
-                                <strong>Service Provided:</strong>
-                            </span>
-                        </div>
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               Shared Attendant
-                           </span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               <strong>Service Provided by:</strong>
-                           </span>
-                        </div>
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               Candace Kind&nbsp;(Agency Name: Tru-Care Providers)
-                           </span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               <strong>Claim Status:</strong>
-                           </span>
-                        </div>
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               Claim Paid
-                           </span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               <strong>Flag Status:</strong>
-                           </span>
-                        </div>
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               Flag Reviewed, No Action Required
-                           </span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               <strong>Service Clock-In Method:</strong>
-                           </span>
-                        </div>
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               Telephone
-                           </span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               <strong>Total Service Units:</strong>
-                           </span>
-                        </div>
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               17
-                           </span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               <strong>Was OTP Used?</strong>
-                           </span>
-                        </div>
-                        <div class="col-xs-6">
-                           <span class="h4">
-                               Yes
-                           </span>
-                        </div>
-                    </div>
-                    <div class="row" style="margin-bottom: 0;">
-                        <div class="well" style="margin-bottom: 0;">
-                            <span class="fa fa-info-circle"></span>  If you see any issues with any information, or would like to report this service for any reason, please
-                            click “Flag for Review” to send this service instance to DHMH.
-                        </div>
-                    </div>
-                    <div class="row">
-                        <hr>
-                        <div class="col-xs-12 text-right">
-                            <button type="button" class="btn btn-default btn-lg" ng-click="model.createNewServiceFlag()"><span class="fa fa-flag"></span> Flag For Review</button>
-                        </div>
-                    </div>
-                </div>
+            <div id="mobileServicesContainer">
+                <div id='servicesCalendar'></div>
+                <service-details></service-details>
             </div>
         </div>
     </div>
+    <back-button url-link="Home" button-label="Home"></back-button>
     <advanced-search></advanced-search>
-    <new-service-flag></new-service-flag>
 </standard-layout>
