@@ -70,40 +70,42 @@
                 </span>
             </div>
         </div>
-        <div id="flagStatus" class="row" style="display: none;">
-            <div class="col-xs-6">
+        <div id="flagStatus">
+            <div class="row">
+                <div class="col-xs-6">
                            <span class="h4">
                                <strong>Flag Status:</strong>
                            </span>
-        </div>
-            <div class="col-xs-6">
+                </div>
+                <div class="col-xs-6">
                            <span class="h4">
                                Flag Reviewed  (No Action Required)
                            </span>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6">
+            <div class="row">
+                <div class="col-xs-6">
                            <span class="h4">
                                <strong>Flag Reason:</strong>
                            </span>
-        </div>
-            <div class="col-xs-6">
+                </div>
+                <div class="col-xs-6">
                            <span class="h4">
                                 Provider did not show up/clock in/out time is inaccurate
                            </span>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6">
+            <div class="row">
+                <div class="col-xs-6">
                            <span class="h4">
                                <strong>My Flag Comments:</strong>
                            </span>
-            </div>
-            <div class="col-xs-6">
+                </div>
+                <div class="col-xs-6">
                            <span class="h4">
                                 I do not recall this service ever happening.
                            </span>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -170,7 +172,8 @@
         <div class="row">
             <hr>
             <div class="col-xs-12 text-right">
-                <button id="flagButton" type="button" class="btn btn-default btn-lg" ng-click="model.createNewServiceFlag()"><span
+                <button id="flagButton" type="button" class="btn btn-default btn-lg"
+                        ng-click="model.createNewServiceFlag()"><span
                         class="fa fa-flag"></span> Flag For Review
                 </button>
                 <button id="printButton" type="button" class="btn btn-default btn-lg" ng-click=""><span
@@ -181,6 +184,8 @@
     </div>
     <br><br><br>
 
-    <button id="ServiceDetailsBackButton" class="btn btn-primary btn-lg" style="display: none;"><span class="fa fa-chevron-left"></span>  Back</button>
+    <button id="ServiceDetailsBackButton" class="btn btn-primary btn-lg" style="display: none;"><span
+            class="fa fa-chevron-left"></span> Back
+    </button>
     <new-service-flag></new-service-flag>
 </div>

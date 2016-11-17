@@ -262,6 +262,8 @@
                         $("back-button").show();
                     },500);
                 });
+
+                $("#flagButton").hide();
             },400)
 
 
