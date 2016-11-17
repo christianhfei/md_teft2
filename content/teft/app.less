@@ -3,20 +3,33 @@
 @darkerBlue: darken(@mainBlue, 6%);
 
 .cardGradient{
-  background: rgba(226,226,226,1);
-background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(35%, rgba(226,226,226,1)), color-stop(45%, rgba(219,219,219,1)), color-stop(66%, rgba(209,209,209,1)), color-stop(100%, rgba(209,209,209,1)));
-background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
-background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
-background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
-background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(226,226,226,1) 35%, rgba(219,219,219,1) 45%, rgba(209,209,209,1) 66%, rgba(209,209,209,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#d1d1d1', GradientType=0 );
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#67a1d3+0,3b5f89+99 */
+background: #67a1d3; /* Old browsers */
+background: -moz-linear-gradient(top,  #67a1d3 0%, #3b5f89 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #67a1d3 0%,#3b5f89 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #67a1d3 0%,#3b5f89 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67a1d3', endColorstr='#3b5f89',GradientType=0 ); /* IE6-9 */
+
+}
+
+input.required, select.required{
+  background: rgba(244, 248, 42, 0.39) !important;
+}
+
+label.required::after{
+  content: "*";
+  position: relative;
+  left: 3px;
+  bottom: 1px;
+  color: #ff9800;
+  font-weight: bolder;
+  font-size: 22px;
 }
 
 .generalBoxShadow{
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
-  -moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.28);
-  box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.20);
+  -moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.20);
+  box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.20);
 }
 
 .footerBoxShadow{
@@ -34,8 +47,20 @@ body{
   margin-bottom: 65px;
 }
 
+.btn.btn-default{
+  .cardGradient;
+  color: black;
+  text-shadow: none;
+  font-weight: bold;
+  border: 1px solid darken(#cccccc, 10%);
+}
+
 a.btn.btn-default.btn-lg.back-button{
   margin-top: 15px !important;
+}
+
+#back-button-area{
+  left: -30px !important;
 }
 
 a:hover {
@@ -54,7 +79,7 @@ input[type='checkbox']{
 }
 
 label{
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   float:right;
   vertical-align: baseline !important;
   text-align: right;
@@ -75,7 +100,7 @@ span{
     font-size: 1.6rem;
   }
   &.data-element{
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -96,42 +121,6 @@ footer.footer{
       }
     }
   }
-}
-
-div[data-toggle="buttons"] label.active{
-    color: #7AA3CC;
-}
-
-div[data-toggle="buttons"] label {
-display: inline-block;
-padding: 6px 12px;
-margin-bottom: 0;
-font-size: 14px;
-font-weight: normal;
-line-height: 2em;
-text-align: left;
-white-space: nowrap;
-vertical-align: top;
-cursor: pointer;
-background-color: none;
-border: 0px solid
-#c8c8c8;
-border-radius: 3px;
-color: #c8c8c8;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
-}
-
-div[data-toggle="buttons"] label:hover {
-color: #7AA3CC;
-}
-
-div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
--webkit-box-shadow: none;
-box-shadow: none;
 }
 
 nav.navbar.navbar-default.navbar-fixed-top{
@@ -174,7 +163,7 @@ div.info-panel{
   }
 
   p:not(.lead){
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -182,14 +171,15 @@ div#breadcrumb{
   background: lighten(#ccc, 11%);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  padding: 15px 0 13px 0;
+  padding: 15px 10px 13px 10px;
   margin: 8px 0 0 0;
   a.breadcrumb{
     background: none;
+    color: lighten(#174d6c, 10%);
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     span.glyphicon, span.fa{
-      font-size: 2.3rem !important;
+      font-size: 1.8rem !important;
       display: inline-block !important;
       margin-right: 8px;
     }
@@ -246,12 +236,12 @@ div.container-fluid.input-background, div.input-background{
       color: #333;
       width: auto;
       padding: 0;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       text-align: right;
     }
     span.data-element{
       text-align: left;
-      font-size: 2rem;
+      font-size: 1.6rem;
       display: inline-block;
     }
   }
@@ -305,55 +295,72 @@ div.well{
 div.row.menu-container{
   padding: 0;
   height: 100%;
+  a{
+
+  }
   .menu-option{
     height: auto;
-
-    .option-inner{
-      width: 100%;
-      padding: 25px 20px 20px 20px;
-      height: 380px;
-      min-width: 250px;
-      margin: 10px auto;
-      border: 2px solid darken(#cccccc, 10%);
-      border-radius: 4px;
-      //background: lighten(#CCC, 12%);
-      .cardGradient;
-      .generalBoxShadow;
-      span.glyphicon, span.fa{
-        display: block;
-        color: darken(@darkerBlue, 15%);
-        font-size: 4rem;
-        margin-bottom: 5px;
+    a{
+      &:hover{
+        text-decoration: none;
       }
-
-      a{
-
-        h2{
-          font-weight: 400 !important;
+      .option-inner{
+        width: 100%;
+        padding: 25px 20px 20px 20px;
+        height: 380px;
+        min-width: 250px;
+        margin: 10px auto;
+        border: 2px solid darken(#cccccc, 5%);
+        border-radius: 4px;
+        //background: lighten(#CCC, 12%);
+        .cardGradient;
+        //background-image: linear-gradient(#6d94bf, #446e9b 50%, #3e648d);
+        .generalBoxShadow;
+        span.glyphicon, span.fa{
+          display: block;
+          color: white;
           font-size: 3.5rem;
-          color: darken(@darkerBlue, 15%);
-          text-decoration: underline;
-          word-break: normal;
-          margin-bottom: 25px;
-          margin-top: 0;
-        }
-      }
-      div.well{
-        p.lead{
-          font-size: 2rem;
-          font-weight: bold;
           margin-bottom: 5px;
         }
-        p:not(.lead){
-          font-size: 1.8rem;
-        }
-        ul{
-          li{
+
+
+
+          h2{
+            font-weight: bold;
+            font-size: 2.6rem;
+            color: white;
+            //text-decoration: underline;
+            word-break: normal;
+            margin-bottom: 25px;
+            margin-top: 0;
+          }
+
+
+        div.well{
+          padding: 10px;
+          background: transparent;
+          p.lead{
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: white;
+          }
+          p:not(.lead){
             font-size: 1.8rem;
+            color: white;
+          }
+          ul{
+            padding-left: 20px;
+            li{
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: white;
+            }
           }
         }
       }
     }
+
   }
 }
 
@@ -367,8 +374,11 @@ div.row.rep-container{
     }
     span{
       &.label{
-        color: #333;
+        display: block;
+        text-align: left;
+        color: #999;
         font-size: 1.6rem;
+        padding-left: 0;
       }
       &.data-element{
         font-size: 2rem;
@@ -388,7 +398,12 @@ div.row.rep-container{
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+  div.row.menu-container{
+    .menu-option
+      .option-inner{
+        height: 375px !important;
+      }
+    }
 }
 
 /* Small Devices, Tablets */
@@ -401,7 +416,7 @@ div.row.rep-container{
   div.row.menu-container{
     .menu-option
       .option-inner{
-        height: auto;
+        height: auto !important;
       }
     }
 

@@ -1,17 +1,33 @@
 .cardGradient {
-  background: #e2e2e2;
-  background: -moz-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(35%, #e2e2e2), color-stop(45%, #dbdbdb), color-stop(66%, #d1d1d1), color-stop(100%, #d1d1d1));
-  background: -webkit-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  background: -o-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  background: -ms-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  background: linear-gradient(to bottom, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2e2e2', endColorstr='#d1d1d1', GradientType=0);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#67a1d3+0,3b5f89+99 */
+  background: #67a1d3;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #67a1d3 0%, #3b5f89 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #67a1d3 0%, #3b5f89 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #67a1d3 0%, #3b5f89 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67a1d3', endColorstr='#3b5f89', GradientType=0);
+  /* IE6-9 */
+}
+input.required,
+select.required {
+  background: rgba(244, 248, 42, 0.39) !important;
+}
+label.required::after {
+  content: "*";
+  position: relative;
+  left: 3px;
+  bottom: 1px;
+  color: #ff9800;
+  font-weight: bolder;
+  font-size: 22px;
 }
 .generalBoxShadow {
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
-  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.2);
 }
 .footerBoxShadow {
   -webkit-box-shadow: 0px -1px 17px 0px rgba(0, 0, 0, 0.12);
@@ -25,8 +41,28 @@ body {
   font-size: 1.6rem;
   margin-bottom: 65px;
 }
+.btn.btn-default {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#67a1d3+0,3b5f89+99 */
+  background: #67a1d3;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #67a1d3 0%, #3b5f89 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #67a1d3 0%, #3b5f89 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #67a1d3 0%, #3b5f89 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67a1d3', endColorstr='#3b5f89', GradientType=0);
+  /* IE6-9 */
+  color: black;
+  text-shadow: none;
+  font-weight: bold;
+  border: 1px solid #b3b3b3;
+}
 a.btn.btn-default.btn-lg.back-button {
   margin-top: 15px !important;
+}
+#back-button-area {
+  left: -30px !important;
 }
 a:hover {
   cursor: pointer;
@@ -40,7 +76,7 @@ input[type='checkbox'] {
   height: 2.5rem;
 }
 label {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   float: right;
   vertical-align: baseline !important;
   text-align: right;
@@ -58,7 +94,7 @@ span.label {
   font-size: 1.6rem;
 }
 span.data-element {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 footer.footer {
   position: fixed;
@@ -77,39 +113,6 @@ footer.footer div.container-fluid p.text-muted {
 footer.footer div.container-fluid p.text-muted:first-of-type {
   margin: 8px 0 0 0;
   font-weight: bold;
-}
-div[data-toggle="buttons"] label.active {
-  color: #7AA3CC;
-}
-div[data-toggle="buttons"] label {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 2em;
-  text-align: left;
-  white-space: nowrap;
-  vertical-align: top;
-  cursor: pointer;
-  background-color: none;
-  border: 0px solid
-#c8c8c8;
-  border-radius: 3px;
-  color: #c8c8c8;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-div[data-toggle="buttons"] label:hover {
-  color: #7AA3CC;
-}
-div[data-toggle="buttons"] label:active,
-div[data-toggle="buttons"] label.active {
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 nav.navbar.navbar-default.navbar-fixed-top {
   background: #174d6c;
@@ -144,23 +147,24 @@ div.info-panel p.lead {
   font-size: 2.8rem;
 }
 div.info-panel p:not(.lead) {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 div#breadcrumb {
   background: #e8e8e8;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  padding: 15px 0 13px 0;
+  padding: 15px 10px 13px 10px;
   margin: 8px 0 0 0;
 }
 div#breadcrumb a.breadcrumb {
   background: none;
+  color: #206b96;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 div#breadcrumb a.breadcrumb span.glyphicon,
 div#breadcrumb a.breadcrumb span.fa {
-  font-size: 2.3rem !important;
+  font-size: 1.8rem !important;
   display: inline-block !important;
   margin-right: 8px;
 }
@@ -209,13 +213,13 @@ div.input-background div.row span.label {
   color: #333;
   width: auto;
   padding: 0;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   text-align: right;
 }
 div.container-fluid.input-background div.row span.data-element,
 div.input-background div.row span.data-element {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: inline-block;
 }
 div.container-fluid.input-background.planofservice div.row div[class|='col'] span.label,
@@ -250,52 +254,68 @@ div.row.menu-container {
 div.row.menu-container .menu-option {
   height: auto;
 }
-div.row.menu-container .menu-option .option-inner {
+div.row.menu-container .menu-option a:hover {
+  text-decoration: none;
+}
+div.row.menu-container .menu-option a .option-inner {
   width: 100%;
   padding: 25px 20px 20px 20px;
   height: 380px;
   min-width: 250px;
   margin: 10px auto;
-  border: 2px solid #b3b3b3;
+  border: 2px solid #bfbfbf;
   border-radius: 4px;
-  background: #e2e2e2;
-  background: -moz-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(35%, #e2e2e2), color-stop(45%, #dbdbdb), color-stop(66%, #d1d1d1), color-stop(100%, #d1d1d1));
-  background: -webkit-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  background: -o-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  background: -ms-linear-gradient(top, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  background: linear-gradient(to bottom, #e2e2e2 0%, #e2e2e2 35%, #dbdbdb 45%, #d1d1d1 66%, #d1d1d1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2e2e2', endColorstr='#d1d1d1', GradientType=0);
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
-  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.28);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#67a1d3+0,3b5f89+99 */
+  background: #67a1d3;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #67a1d3 0%, #3b5f89 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #67a1d3 0%, #3b5f89 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #67a1d3 0%, #3b5f89 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67a1d3', endColorstr='#3b5f89', GradientType=0);
+  /* IE6-9 */
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.2);
 }
-div.row.menu-container .menu-option .option-inner span.glyphicon,
-div.row.menu-container .menu-option .option-inner span.fa {
+div.row.menu-container .menu-option a .option-inner span.glyphicon,
+div.row.menu-container .menu-option a .option-inner span.fa {
   display: block;
-  color: #1a577a;
-  font-size: 4rem;
+  color: white;
+  font-size: 3.5rem;
   margin-bottom: 5px;
 }
-div.row.menu-container .menu-option .option-inner a h2 {
-  font-weight: 400 !important;
-  font-size: 3.5rem;
-  color: #1a577a;
-  text-decoration: underline;
+div.row.menu-container .menu-option a .option-inner h2 {
+  font-weight: bold;
+  font-size: 2.6rem;
+  color: white;
   word-break: normal;
   margin-bottom: 25px;
   margin-top: 0;
 }
-div.row.menu-container .menu-option .option-inner div.well p.lead {
-  font-size: 2rem;
+div.row.menu-container .menu-option a .option-inner div.well {
+  padding: 10px;
+  background: transparent;
+}
+div.row.menu-container .menu-option a .option-inner div.well p.lead {
+  font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 5px;
+  color: white;
 }
-div.row.menu-container .menu-option .option-inner div.well p:not(.lead) {
+div.row.menu-container .menu-option a .option-inner div.well p:not(.lead) {
   font-size: 1.8rem;
+  color: white;
 }
-div.row.menu-container .menu-option .option-inner div.well ul li {
-  font-size: 1.8rem;
+div.row.menu-container .menu-option a .option-inner div.well ul {
+  padding-left: 20px;
+}
+div.row.menu-container .menu-option a .option-inner div.well ul li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 div.row.rep-container h2 {
   margin-top: 0;
@@ -304,8 +324,11 @@ div.row.rep-container input.rep-radio {
   margin: 37px 0 0 50%;
 }
 div.row.rep-container span.label {
-  color: #333;
+  display: block;
+  text-align: left;
+  color: #999;
   font-size: 1.6rem;
+  padding-left: 0;
 }
 div.row.rep-container span.data-element {
   font-size: 2rem;
@@ -313,6 +336,11 @@ div.row.rep-container span.data-element {
 /*  MEDIA QUERIES */
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  div.row.menu-container .menu-option .option-inner {
+    height: 375px !important;
+  }
+}
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   label {
@@ -320,7 +348,7 @@ div.row.rep-container span.data-element {
     float: none;
   }
   div.row.menu-container .menu-option .option-inner {
-    height: auto;
+    height: auto !important;
   }
   div.input-background.planofservice div.row div[class|='col'] span.label {
     display: inline-block;
