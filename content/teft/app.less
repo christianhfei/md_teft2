@@ -2,6 +2,31 @@
 @mainBlue: #2C96D3;
 @darkerBlue: darken(@mainBlue, 6%);
 
+h1,
+h2 {
+  color: #174d6c;
+}
+
+h1 {
+  border-bottom: 2px solid #174d6c;
+  margin-bottom: 20px;
+}
+
+* {
+  outline: none !important;
+}
+
+#breadcrumb:after {
+  content: " ";
+  background: #e8e8e8;
+  width: 200vw;
+  height: 53px;
+  position: absolute;
+  left: -30%;
+  z-index: -1;
+  top: 0;
+  }
+
 .cardGradient{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#67a1d3+0,3b5f89+99 */
 background: #67a1d3; /* Old browsers */
@@ -40,20 +65,21 @@ label.required::after{
 
 html{
   font-size: 62.5% !important;
+  overflow-x: hidden;
 }
 
 body{
   font-size: 1.6rem;
   margin-bottom: 65px;
 }
-
-.btn.btn-default{
-  .cardGradient;
-  color: black;
-  text-shadow: none;
-  font-weight: bold;
-  border: 1px solid darken(#cccccc, 10%);
-}
+//
+//.btn.btn-default{
+//  .cardGradient;
+//  color: white;
+//  text-shadow: none;
+//  font-weight: bold;
+//  border: 1px solid darken(#cccccc, 10%);
+//}
 
 a.btn.btn-default.btn-lg.back-button{
   margin-top: 15px !important;
@@ -110,16 +136,38 @@ footer.footer{
   width: 100%;
   height: 60px;
   z-index: 9998;
-  background-color: #f5f5f5;
-  .footerBoxShadow;
+  background-color: #e8e8e8;
+  margin-top: 40px;
+  //.footerBoxShadow;
   div.container-fluid{
     p.text-muted{
       margin: 0;
+      color: #206b96;
       &:first-of-type{
         margin: 8px 0 0 0;
         font-weight: bold;
       }
     }
+  }
+}
+
+@media (max-width: 991px) {
+
+  footer.footer{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 10px 0 20px;
+    .pull-left,
+    .pull-right {
+      float: none !important;
+    }
+    .col-md-9 {
+      padding: 0;
+    }
+  }
+  body {
+    margin-bottom: 0px;
   }
 }
 
@@ -172,7 +220,6 @@ div#breadcrumb{
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   padding: 15px 10px 13px 10px;
-  margin: 8px 0 0 0;
   a.breadcrumb{
     background: none;
     color: lighten(#174d6c, 10%);
@@ -310,7 +357,7 @@ div.row.menu-container{
         height: 380px;
         min-width: 250px;
         margin: 10px auto;
-        border: 2px solid darken(#cccccc, 5%);
+        border: 2px solid #386f9e;
         border-radius: 4px;
         //background: lighten(#CCC, 12%);
         .cardGradient;
@@ -324,7 +371,6 @@ div.row.menu-container{
         }
 
 
-
           h2{
             font-weight: bold;
             font-size: 2.6rem;
@@ -333,12 +379,18 @@ div.row.menu-container{
             word-break: normal;
             margin-bottom: 25px;
             margin-top: 0;
+            text-shadow: -1px -1px #174973;
           }
+
+        .fa:before {
+          text-shadow: -1px -1px #174973;
+        }
 
 
         div.well{
           padding: 10px;
-          background: transparent;
+          background: rgba(255, 255, 255, 0.15);
+          border: none;
           p.lead{
             font-size: 1.7rem;
             font-weight: bold;
@@ -358,6 +410,22 @@ div.row.menu-container{
             }
           }
         }
+      }
+
+      .option-inner:hover:after {
+        content: " ";
+        position: absolute;
+        top: 8px;
+        bottom: 8px;
+        left: 14px;
+        right: 14px;
+        //border: 4px solid #4275ff;
+        border: 4px solid #386f9e;
+        //box-shadow: 0 0 9px 5px rgba(147, 176, 255, 0.46);
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.03);
       }
     }
 
@@ -387,8 +455,56 @@ div.row.rep-container{
 
 }
 
-
-
+.btn-default {
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn-default:hover {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  background-image: none;
+}
+.btn-default.active, .btn-default:active, .open > .dropdown-toggle.btn-default {
+  background-color: #cccccc;
+  background-image: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-color: #dbdbdb;
+  background-image: none;
+}
+.btn-default.focus, .btn-default:focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+  background-image: none;
+}
+.btn-default:hover, .btn-default:focus {
+  background-color: #e0e0e0;
+  background-position: 0 -15px;
+  background-image: none;
+}
+.btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+  background-image: none;
+}
 /*  MEDIA QUERIES */
 
 /* Large Devices, Wide Screens */

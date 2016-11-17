@@ -13,6 +13,59 @@
         $scope.init = function() {
             setTimeout(function(){
                 $('#servicesCalendar').fullCalendar({
+                    windowResize: function(view) {
+                        if ($(window).width() < 992){
+                            $(".fc-month-button").hide();
+                            $(".fc-listMonth-button").show();
+
+                        } else {
+                            $(".fc-month-button").show();
+                            $(".fc-listMonth-button").hide();
+                        }
+
+                        if ($(window).width() < 992 && view.type == "month"){
+                            $('#servicesCalendar').fullCalendar('changeView', 'listMonth');
+
+                        } else if (view.type == "listMonth"){
+                            $('#servicesCalendar').fullCalendar( 'changeView', 'month' );
+                        }
+
+
+                        if ($(window).width() < 992){
+                            $("#mobileServicesContainer").slick(
+                                {
+                                    swipeToSlide : false,
+                                    touchMove: false,
+                                    arrows: false,
+                                    dots: false,
+                                    infinite: false,
+                                    adaptiveHeight: true
+
+                                }
+                            );
+                            $("#ServiceDetailsBackButton").show();
+
+                            $scope.slickEnabled = true;
+
+                            $("#serviceDetails").show();
+                        } else {
+                            if ($scope.slickEnabled) {
+                                $("#mobileServicesContainer").slick("unslick");
+                                $("#ServiceDetailsBackButton").hide();
+                                $("back-button").show();
+                                $scope.slickEnabled = false;
+                            }
+                        }
+
+                    },
+                    eventClick: function(calEvent, jsEvent, view) {
+                        if ($scope.slickEnabled) {
+                            $("#mobileServicesContainer").slick("slickNext");
+                            $("back-button").hide();
+                        }
+                    },
+                    height: 700,
+                    "allDaySlot" : false,
                     "defaultDate" : "2016-01-08",
                     "customButtons": {
                         "showFlaggedServices": {
@@ -37,7 +90,7 @@
                     "header" : {
                         "left":   'prev title next',
                         "center": 'advancedSearch showFlaggedServices',
-                        "right":  'month,agendaWeek,listDay'
+                        "right":  'month,listMonth,agendaWeek,listDay'
                     },
                     "today" : "2016-01-08",
                     "views": {
@@ -49,6 +102,9 @@
                         "month": {
                             buttonText: 'Month'
                         },
+                        "listMonth": {
+                            buttonText: 'Month'
+                        },
                         "agendaWeek": {
                             buttonText: 'Week'
                         }
@@ -56,10 +112,10 @@
                     "viewRender": function(view, element) {
 
                         if (view.name == "listDay") {
-                            $(".fc-view-container").addClass("col-xs-6");
+                            $(".fc-view-container").addClass("col-md-6");
                             $("#serviceDetails").show();
                         } else {
-                            $(".fc-view-container").removeClass("col-xs-6");
+                            $(".fc-view-container").removeClass("col-md-6");
                             $("#serviceDetails").hide();
                         }
                     },
@@ -218,16 +274,20 @@
                    $rootScope.$broadcast('performAdvancedSearch', true);
                });
 
-            },400)
+                $(window).resize();
 
+                $("#ServiceDetailsBackButton").on("click", function(){
+                    $("#mobileServicesContainer").slick("slickPrev");
+                    setTimeout(function(){
+                        $("back-button").show();
+                    },500);
+                });
+            },300)
 
         }
 
         $scope.init();
 
-        model.createNewServiceFlag = function() {
-            $rootScope.createNewServiceFlag();
-        }
         $scope.performAdvancedSearch = function() {
             $rootScope.$broadcast('performAdvancedSearch', true);
         }

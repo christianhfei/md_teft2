@@ -1,13 +1,29 @@
 ﻿#back-button-area{
+
+  margin: 40px 0 0px;
+
+  span:last-child {
+    margin-left: 6px;
+  }
+}
+
+
+@media (min-width : 992px) {
+  #back-button-area{
     position: fixed;
     top: 50px;
     bottom: 60px;
     left:0;
     text-align: center;
-}
 
-#back-button-area a {
+    span {
+      display: block;
+    }
+  }
+
+  #back-button-area a {
     top: 50%;
     position: absolute;
     margin-top: -35px;
+  }
 }
