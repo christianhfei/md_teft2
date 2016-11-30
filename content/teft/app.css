@@ -207,11 +207,14 @@ div#breadcrumb span.glyphicon.glyphicon-chevron-right {
 div#accountInfo div.well {
   background: #e8e8e8;
 }
-div#accountInfo div.well div.row {
-  margin-bottom: 15px;
-}
 div#accountInfo div.well div.row:last-of-type {
   margin-bottom: 0;
+}
+div#accountInfo div.well div.row div[class|='col'] {
+  margin-bottom: 15px;
+}
+div#accountInfo div.well div.row div[class|='col']:last-of-type {
+  margin-bottom: 10px;
 }
 div#accountInfo div.well div.row div[class|='col'] span.label {
   display: inline-block;
@@ -236,10 +239,6 @@ div.container-fluid.input-background div.row.input-container,
 div.input-background div.row.input-container {
   margin-bottom: 15px;
 }
-div.container-fluid.input-background div.row,
-div.input-background div.row {
-  margin-bottom: 15px;
-}
 div.container-fluid.input-background div.row span.label,
 div.input-background div.row span.label {
   display: inline-block;
@@ -254,6 +253,10 @@ div.input-background div.row span.data-element {
   text-align: left;
   font-size: 1.6rem;
   display: inline-block;
+}
+div.container-fluid.input-background.planofservice div.row div[class|='col'],
+div.input-background.planofservice div.row div[class|='col'] {
+  margin-bottom: 15px;
 }
 div.container-fluid.input-background.planofservice div.row div[class|='col'] h2,
 div.input-background.planofservice div.row div[class|='col'] h2 {
@@ -321,12 +324,12 @@ div.row.menu-container .menu-option a .option-inner span.glyphicon,
 div.row.menu-container .menu-option a .option-inner span.fa {
   display: block;
   color: white;
-  font-size: 3.5rem;
+  font-size: 6.2rem;
   margin-bottom: 5px;
 }
 div.row.menu-container .menu-option a .option-inner h2 {
   font-weight: bold;
-  font-size: 2.6rem;
+  font-size: 2.9rem;
   color: white;
   word-break: normal;
   margin-bottom: 25px;

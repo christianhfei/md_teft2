@@ -257,11 +257,14 @@ div#accountInfo{
   div.well{
     background: lighten(#ccc, 11%);
     div.row{
-      margin-bottom: 15px;
       &:last-of-type{
         margin-bottom: 0;
       }
       div[class|='col']{
+        margin-bottom: 15px;
+        &:last-of-type{
+          margin-bottom: 10px;
+        }
         span.label{
           display: inline-block;
           color: black;
@@ -293,7 +296,8 @@ div.container-fluid.input-background, div.input-background{
 
   }
   div.row{
-    margin-bottom: 15px;
+    //margin-bottom: 15px;
+
     span.label{
       display: inline-block;
       color: #333;
@@ -311,6 +315,7 @@ div.container-fluid.input-background, div.input-background{
   &.planofservice{
     div.row{
       div[class|='col']{
+        margin-bottom: 15px;
         h2{
           margin-top: 0;
         }
@@ -386,14 +391,14 @@ div.row.menu-container{
         span.glyphicon, span.fa{
           display: block;
           color: white;
-          font-size: 3.5rem;
+          font-size: 6.2rem;
           margin-bottom: 5px;
         }
 
 
           h2{
             font-weight: bold;
-            font-size: 2.6rem;
+            font-size: 2.9rem;
             color: white;
             //text-decoration: underline;
             word-break: normal;
