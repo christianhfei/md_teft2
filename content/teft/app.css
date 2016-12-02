@@ -452,6 +452,9 @@ div.row.rep-container span.data-element {
   border-color: #8c8c8c;
   background-image: none;
 }
+div.well p {
+  font-size: 100%;
+}
 /*  MEDIA QUERIES */
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
