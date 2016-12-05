@@ -22,6 +22,38 @@
 
     </div>
   </div>
+
+<style type="text/css">
+    @media (max-width:767px) {
+        table thead {
+            display: none;
+        }
+
+        table td[class*=span],
+        table td[class^=span]{
+            display: inline-block;
+            float: left;
+            text-align: left;
+            font-weight: bold;
+        }
+        table td.span-6 {
+            width: 50%;
+        }
+        table td.span-4 {
+            width: 33.333333%;
+            border-top: 0px solid !important;
+        }
+        table td:before {
+            content: attr(data-th) ":" ;
+            font-weight: normal;
+            margin-right: 8px;
+        }
+        table td.span-6:before {
+            display: block;
+        }
+    }
+</style>
+
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
       <h2>Listed Representatives</h2>
@@ -40,27 +72,27 @@
           </thead>
           <tbody>
             <tr>
-              <td>Bryan Giles</td>
-              <td>Neighbor</td>
-              <td class="text-center"><span class="fa fa-check-square"></span></td>
-              <td class="text-center"><span class="fa fa-check-square"></span></td>
-              <td class="text-center"><span class="fa fa-check-square"></span></td>
+              <td data-th="Name" class="span-6">Bryan Giles</td>
+              <td data-th="Relationship" class="span-6">Neighbor</td>
+              <td data-th="Guardian" class="text-center span-4"><span class="fa fa-check-square"></span></td>
+              <td data-th="Power of Attorney" class="text-center span-4"><span class="fa fa-check-square"></span></td>
+              <td data-th="CFC Representatives" class="text-center span-4"><span class="fa fa-check-square"></span></td>
 
             </tr>
             <tr>
-              <td>Marc Okubo</td>
-              <td>Friend</td>
-              <td class="text-center">-</td>
-              <td class="text-center">-</td>
-              <td class="text-center">-</td>
+              <td data-th="Name" class="span-6">Marc Okubo</td>
+              <td data-th="Relationship" class="span-6">Friend</td>
+              <td data-th="Guardian" class="text-center span-4">-</td>
+              <td data-th="Power of Attorney" class="text-center span-4">-</td>
+              <td data-th="CFC Representatives" class="text-center span-4">-</td>
 
             </tr>
             <tr>
-              <td>Aaron Beam</td>
-              <td>Cousin</td>
-              <td class="text-center">-</td>
-              <td class="text-center">-</td>
-              <td class="text-center">-</td>
+              <td data-th="Name" class="span-6">Aaron Beam</td>
+              <td data-th="Relationship" class="span-6">Cousin</td>
+              <td data-th="Guardian" class="text-center span-4">-</td>
+              <td data-th="Power of Attorney" class="text-center span-4">-</td>
+              <td data-th="CFC Representatives" class="text-center span-4">-</td>
               
             </tr>
           </tbody>
