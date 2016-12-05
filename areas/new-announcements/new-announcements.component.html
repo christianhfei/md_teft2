@@ -1,0 +1,77 @@
+<style type="text/css">
+
+    .slick-dots li button:before {
+        color: #494949;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #05579a;
+    }
+
+    .slick-dots li button:before,
+    .slick-dots li.slick-active button:before {
+        font-size: 50px;
+    }
+</style>
+<div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="model.showModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">New Announcements</h3>
+            </div>
+            <div class="modal-body">
+                <div id="flag-wizard">
+                    <div style="min-height: 350px;">
+                        <br><br><br>
+                        <div class="">
+                            <div style="background-color: #174d6c; padding: 15px; border-radius: 6px">
+                                <h4 class="h2" style="color: white; padding: 0; margin: 0"><strong>Welcome to MyLTSS Maryland!</strong></h4>
+                                <h4 style="color: white">
+                                    <p>Here you will find the latest news and announcements regarding your service program.</p>
+                                    <p>Since this is your first time on MyLTSS, here are few tips to help you get started!</p>
+                                </h4>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div style="min-height: 350px;">
+                        <br><br><br>
+                        <p>
+                                <span class="col-xs-1">
+                                    <span class="fa fa-group" style="font-size: 275%"></span>
+                                </span>
+                            <span class="col-xs-11">
+                                    <strong class="h3">My Representatives</strong><br>
+                                    With <strong>MyLTSS</strong>, we try to make it simple for you to manage your long-term services and supports. And, for your convenience, we also allow you to the ability to setup your representatives to manage your <strong>MyLTSS</strong> on your behalf.
+                                </span>
+                        </p>
+                    </div>
+                    <!--<div style="min-height: 350px;">-->
+                        <!--<br><br><br>-->
+                        <!--<p>-->
+                                <!--<span class="col-xs-1">-->
+                                    <!--<span class="fa fa-group" style="font-size: 275%"></span>-->
+                                <!--</span>-->
+                            <!--<span class="col-xs-11">-->
+                                    <!--<strong class="h3">My Representatives</strong><br>-->
+                                    <!--With <strong>MyLTSS</strong>, we try to make it simple for you to manage your long-term services and supports. And, for your convenience, we also allow you to the ability to setup your representatives to manage your <strong>MyLTSS</strong> on your behalf.-->
+                                <!--</span>-->
+                        <!--</p>-->
+                    <!--</div>-->
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="text-align: left">
+                <button class="btn btn-default" type="button" ng-show="model.showPrevBtn" ng-click="model.prevAnnouncement()" style="float:left;"><span class="fa fa-chevron-left"></span>&nbsp;Previous</button>
+                <button class="btn btn-default" type="button" ng-show="model.showNextBtn" ng-click="model.nextAnnouncement()" style="float:right">Next&nbsp;<span class="fa fa-chevron-right"></span></button>
+                <button class="btn btn-primary" type="button" ng-show="model.showDoneBtn" ng-click="model.closeModal()" style="float: right;">Done</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade in" ng-show="model.showModal"></div>
