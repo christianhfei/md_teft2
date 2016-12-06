@@ -8,6 +8,13 @@
         model.showNextBtn = true;
         model.showPrevBtn = false;
         model.showDoneBtn = false;
+        model.showSendBtn = false;
+        model.showCancelBtn = false;
+        model.showAnnouncements = true;
+        model.showCancelConfirmation = false;
+        model.showSendConfirmation = false;
+        model.modalState = "";
+        model.modalTitle = "New Announcements";
 
 
         model.progressValue = 100;
@@ -37,31 +44,93 @@
             model.showNextBtn = true;
             model.showPrevBtn = false;
             model.showDoneBtn = false;
+            model.showCancelBtn = false;
+            model.showSendBtn = false;
+            model.showAnnouncements = true;
+            model.showCancelConfirmation = false;
+            model.showSendConfirmation = false;
         }
 
         model.prevAnnouncement = function() {
             $('#flag-wizard').slick("prev");
-            model.showNextBtn = true;
-            model.showPrevBtn = false;
-            model.showDoneBtn = false;
         }
         model.nextAnnouncement = function() {
             $('#flag-wizard').slick("next");
-            model.showNextBtn = false;
-            model.showPrevBtn = true;
-            model.showDoneBtn = true;
         }
 
-        // model.submitFlag = function() {
-        //     $('#flag-wizard').slick("next");
-        //     $("#prevFlagStep").hide();
-        //     $("#nextFlagStep").hide();
-        //     $("#cancelFlag").hide();
-        //     $("#submitFlag").hide();
-        //     $("#closeFlag").show();
-        // }
+        model.showNextButton = function(val) {
+            model.showNextBtn = val;
+        }
+        model.showPrevButton = function(val) {
+            model.showPrevBtn = val;
+        }
+        model.showDoneButton = function(val) {
+            model.showDoneBtn = val;
+        }
+        model.showCancelButton = function(val) {
+            model.showCancelBtn = val;
+        }
+        model.showSendButton = function(val) {
+            model.showSendBtn = val;
+        }
 
-        $scope.init = function() {
+       $scope.$on("slideChanged", function(event, currentSlide) {
+            if (currentSlide == 0) {
+                model.modalTitle = "New Announcements";
+                model.showNextButton(true);
+                model.showPrevButton(false);
+                model.showDoneButton(false);
+                model.showCancelButton(false);
+                model.showSendButton(false);
+                $scope.$apply();
+
+            } else if (currentSlide == 1) {
+                model.modalTitle = "Initial Setup";
+                model.showNextButton(false);
+                model.showPrevButton(true);
+                model.showDoneButton(false);
+                model.showCancelButton(false);
+                model.showSendButton(false);
+                $scope.$apply();
+
+            } else if (currentSlide == 2) {
+                model.modalTitle = "My Representatives";
+                model.showNextButton(false);
+                model.showPrevButton(false);
+                model.showDoneButton(false);
+                model.showCancelButton(true);
+                model.showSendButton(true);
+                $scope.$apply();
+            }
+        });
+
+        model.cancelConfirmation = function() {
+            model.modalTitle = "Confirmation";
+            model.showNextButton(false);
+            model.showPrevButton(false);
+            model.showDoneButton(true);
+            model.showCancelButton(false);
+            model.showSendButton(false);
+            model.showAnnouncements = false;
+            model.showCancelConfirmation = true;
+            model.showSendConfirmation = false;
+            $scope.$apply();
+        }
+
+        model.sendConfirmation = function() {
+            model.modalTitle = "Confirmation";
+            model.showNextButton(false);
+            model.showPrevButton(false);
+            model.showDoneButton(true);
+            model.showCancelButton(false);
+            model.showSendButton(false);
+            model.showAnnouncements = false;
+            model.showCancelConfirmation = false;
+            model.showSendConfirmation = true;
+            $scope.$apply();
+        }
+
+        model.$onInit = function() {
             setTimeout(function(){
 
                 $('#flag-wizard').slick({
@@ -71,11 +140,14 @@
                     slidesToShow: 1,
                     adaptiveHeight: true,
                     arrows : false
+                })
+
+                $('#flag-wizard').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                    $scope.$emit("slideChanged", currentSlide);
                 });
+
             }, 400)
         }
-
-        $scope.init();
 
     }
 
