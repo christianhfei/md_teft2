@@ -129,6 +129,7 @@
         }
 
         model.$onInit = function() {
+            setTimeout(function(){
 
                 $('#flag-wizard').slick({
                     dots: true,
@@ -143,6 +144,7 @@
                     $scope.$emit("slideChanged", currentSlide);
                 });
 
+            }, 100)
         }
 
     }
