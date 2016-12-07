@@ -7,10 +7,31 @@
         model.title = "MyLTSS - Home";
 
         model.$onInit = function() {
+
+            var isInitialLogin = sessionStorage.getItem("isInitialLogin");
+
+            if (isInitialLogin == null) {
+                model.isInitialLogin = true;
+            } else if (isInitialLogin == "false") {
+                model.isInitialLogin = false;
+
+            }
+
             setTimeout(function(){
-                $rootScope.$emit("showAnnouncements", true);
+                if (model.isInitialLogin == true) {
+                    $rootScope.$emit("showAnnouncements", true);
+
+                    sessionStorage.setItem('isInitialLogin', false);
+                    model.isInitialLogin = false;
+
+                } else if (model.isInitialLogin == false){
+                    $rootScope.$emit("showAnnouncements", false);
+                }
+
+
             }, 400)
         }
+
     };
 
     module.component("home", {

@@ -4,7 +4,7 @@
 
     var controller = function($scope, $rootScope) {
         var model = this;
-        model.showModal = false;
+        model.showAnnouncementsModal = false;
         model.showNextBtn = true;
         model.showPrevBtn = false;
         model.showDoneBtn = false;
@@ -16,29 +16,31 @@
         model.modalState = "";
         model.modalTitle = "New Announcements";
 
-
         model.progressValue = 100;
         model.opacity = 1;
 
         $rootScope.$on("showAnnouncements", function(event,data){
             $scope.showNewAnnouncements(data);
         });
+
         $scope.showNewAnnouncements = function(data) {
+
             if(data == true) {
                 model.showModal();
             } else {
-                model.closeModal();
+               //Do Nothing
             }
         }
 
         model.showModal = function () {
-            model.showModal = true;
+            model.showAnnouncementsModal = true;
             $("body").css("overflow-y", "hidden");
             $(window).resize();
+            $scope.$apply();
         }
 
         model.closeModal = function () {
-            model.showModal = false;
+            model.showAnnouncementsModal = false;
             $("body").css("overflow-y", "auto");
             $('#flag-wizard').slickGoTo(0);
             model.showNextBtn = true;

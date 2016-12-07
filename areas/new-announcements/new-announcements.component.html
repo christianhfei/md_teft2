@@ -12,8 +12,11 @@
     .slick-dots li.slick-active button:before {
         font-size: 50px;
     }
+    .modal.announcements {
+        display: block;
+    }
 </style>
-<div class="modal fade in" aria-hidden="false" style="display: block;" ng-show="model.showModal">
+<div class="modal announcements fade in" aria-hidden="false" ng-show="model.showAnnouncementsModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -172,4 +175,4 @@
         </div>
     </div>
 </div>
-<div class="modal-backdrop fade in" ng-show="model.showModal"></div>
+<div class="modal-backdrop fade in" ng-show="model.showAnnouncementsModal"></div>
