@@ -5,6 +5,7 @@
     var controller = function ($scope, $rootScope) {
         var model = this;
         model.title = "MyLTSS - Services";
+        model.showFlaggedMsg = false;
 
         var fcOptions = {};
             fcOptions.bgColor = "#d87500";
@@ -296,6 +297,8 @@
         $scope.toggleFlaggedServices = function(){
             if ($scope.showFlaggedOnly == false) {
                 $scope.showFlaggedOnly = true;
+                model.showFlaggedMsg = false;
+                $scope.$apply();
                 $("a.fc-day-grid-event, a.fc-time-grid-event").not("[style*=background-color]").show();
                 $(".fc-event-dot").not("[style*=background-color]").each(function(){
                     $(this).parents(".fc-list-item").first().show();
@@ -304,6 +307,8 @@
 
             } else if ($scope.showFlaggedOnly == true || $scope.showFlaggedOnly == null ) {
                 $scope.showFlaggedOnly = false;
+                model.showFlaggedMsg = true;
+                $scope.$apply();
                 $("a.fc-day-grid-event, a.fc-time-grid-event").not("[style*=background-color]").hide();
                 $(".fc-event-dot").not("[style*=background-color]").each(function(){
                     $(this).parents(".fc-list-item").first().hide();

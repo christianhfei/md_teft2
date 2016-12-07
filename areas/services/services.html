@@ -7,25 +7,35 @@
         .fc-content {
 
         }
+
         .fc-time {
             display: block;
         }
+
         .fc-title {
             display: block;
         }
+
         .fc-row.fc-week.fc-widget-content {
             min-height: 185px;
         }
+
         .fc-view-container {
             padding-left: 0px;
         }
+
         #serviceDetails {
             padding-right: 0px;
         }
     </style>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1>My Services</h1>
+            <h1>My Services
+                <span ng-show="model.showFlaggedMsg" style="font-size: 18px; color: gray; margin-left: 10px;">
+                            <span class="color-indicator circle" style="background-color: #d87500; width: 15px; height: 15px;"></span>
+                            Showing only <strong>Flagged Services</strong>
+                </span>
+            </h1>
             <div id="mobileServicesContainer">
                 <div id='servicesCalendar'></div>
                 <service-details></service-details>
@@ -38,6 +48,7 @@
                     background-color: darkgray;
                     margin-top: 1px;
                 }
+
                 .color-indicator.circle {
                     -webkit-border-radius: 10px;
                     -moz-border-radius: 10px;
