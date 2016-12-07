@@ -114,7 +114,6 @@
             model.showAnnouncements = false;
             model.showCancelConfirmation = true;
             model.showSendConfirmation = false;
-            $scope.$apply();
         }
 
         model.sendConfirmation = function() {
@@ -127,11 +126,9 @@
             model.showAnnouncements = false;
             model.showCancelConfirmation = false;
             model.showSendConfirmation = true;
-            $scope.$apply();
         }
 
         model.$onInit = function() {
-            setTimeout(function(){
 
                 $('#flag-wizard').slick({
                     dots: true,
@@ -146,7 +143,6 @@
                     $scope.$emit("slideChanged", currentSlide);
                 });
 
-            }, 400)
         }
 
     }
