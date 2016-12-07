@@ -35,6 +35,7 @@
             { path: '/profile', component: 'myProfile', name: 'My Profile'},
             { path: '/clientregistration', component: 'clientRegister', name: 'Client Registration' },
             { path: '/repregistration', component: 'repRegister', name: 'Representative Registration' },
+            { path: '/help', component: 'help', name: 'Help' },
             { path: '/**', redirectTo: ['Home'] }
         ]
     });
