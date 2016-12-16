@@ -1,6 +1,6 @@
 ﻿(function () {
     "use strict";
-    var module = angular.module("macwisWebApp", ['ui.bootstrap', "ngComponentRouter"]);
+    var module = angular.module("macwisWebApp", ['ui.bootstrap', "ngComponentRouter", 'ngNotificationsBar']);
 
     module.value("$routerRootComponent", "macwisWebApp");
 
@@ -35,6 +35,8 @@
             { path: '/profile', component: 'myProfile', name: 'My Profile'},
             { path: '/clientregistration', component: 'clientRegister', name: 'Client Registration' },
             { path: '/repregistration', component: 'repRegister', name: 'Representative Registration' },
+            { path: '/help', component: 'help', name: 'Help' },
+            { path: '/manumber', component: 'manumberCheck', name: 'Activate Registration Process' },
             { path: '/**', redirectTo: ['Home'] }
         ]
     });

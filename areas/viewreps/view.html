@@ -22,52 +22,100 @@
 
     </div>
   </div>
+
+<style type="text/css">
+    @media (max-width:767px) {
+        table thead {
+            display: none;
+        }
+
+        table td[class*=span],
+        table td[class^=span]{
+            display: inline-block;
+            float: left;
+            text-align: left;
+            font-weight: bold;
+            border-top: 0px solid !important;
+        }
+        table td.span-6 {
+            width: 50%;
+        }
+        table td.span-4 {
+            width: 33.333333%;
+        }
+        table td:before {
+            content: attr(data-th) ":" ;
+            font-weight: normal;
+            margin-right: 8px;
+        }
+        table td.span-6:before {
+            display: block;
+        }
+
+        table tbody tr:not(:first-child) {
+            border-top: 1px solid #dddddd;
+        }
+    }
+</style>
+
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
+    <div class="col-xs-12 col-sm-12 col-md-12">
       <h2>Listed Representatives</h2>
       <div class="table-responsive">
         <table class="table table-striped">
           <caption class="sr-only">Listed Representatives</caption>
           <thead>
             <tr>
-              <td>Name</td>
+              <td>Representative Name</td>
               <td>Relationship</td>
-              <td class="text-center">Guardian</td>
-              <td class="text-center">Power of Attorney</td>
-              <td class="text-center">CFC Representatives</td>
+              <td class="text-center">Guardian of Person</td>
+              <td class="text-center">Guardian of Property</td>
+              <td class="text-center">CFC Representative</td>
 
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Bryan Giles</td>
-              <td>Neighbor</td>
-              <td class="text-center"><span class="fa fa-check-square"></span></td>
-              <td class="text-center"><span class="fa fa-check-square"></span></td>
-              <td class="text-center"><span class="fa fa-check-square"></span></td>
+              <td data-th="Representative Name" class="span-6">Bryan Giles</td>
+              <td data-th="Relationship" class="span-6">Neighbor</td>
+              <td data-th="Guardian of Person" class="text-center span-6"><span class="fa fa-check-square"></span></td>
+              <td data-th="Guardian of Property" class="text-center span-6"><span class="fa fa-check-square"></span></td>
+              <td data-th="CFC Representatives" class="text-center span-6"><span class="fa fa-check-square"></span></td>
 
             </tr>
             <tr>
-              <td>Marc Okubo</td>
-              <td>Friend</td>
-              <td class="text-center">-</td>
-              <td class="text-center">-</td>
-              <td class="text-center">-</td>
+              <td data-th="Representative Name" class="span-6">Marc Okubo</td>
+              <td data-th="Relationship" class="span-6">Friend</td>
+              <td data-th="Guardian of Person" class="text-center span-6">-</td>
+              <td data-th="Guardian of Property" class="text-center span-6">-</td>
+              <td data-th="CFC Representatives" class="text-center span-6">-</td>
 
             </tr>
             <tr>
-              <td>Aaron Beam</td>
-              <td>Cousin</td>
-              <td class="text-center">-</td>
-              <td class="text-center">-</td>
-              <td class="text-center">-</td>
-              
+              <td data-th="Representative Name" class="span-6">Aaron Beam</td>
+              <td data-th="Relationship" class="span-6">Cousin</td>
+              <td data-th="Guardian of Person" class="text-center span-6">-</td>
+              <td data-th="Guardian of Property" class="text-center span-6">-</td>
+              <td data-th="CFC Representatives" class="text-center span-6">-</td>
+
             </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
+
+    <br><br><br><br>
+    <div class="well">
+        <p>
+            <strong>Guardian of Person</strong>  is the person appointed to manage your personal health care interests. This individual can be your legal guardian or someone appointed as your guardian temporarily.
+        </p>
+        <p><strong>Guardian of Property</strong> is the person appointed to manage your personal property interests. This individual can be your legal guardian or someone appointed as your guardian temporarily.</p>
+        <p>
+            <strong>Community First Choice (CFC) Representative</strong> is the person who has written authorization to manage your Plan of Service.
+        </p>
+        <p><i>For more information, please contact your supports planner.</i></p>
+    </div>
 
     <back-button url-link="My Representatives"></back-button>
 </standard-layout>

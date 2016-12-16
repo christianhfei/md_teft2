@@ -313,6 +313,13 @@ div.container-fluid.input-background, div.input-background{
     }
   }
   &.planofservice{
+    h3.rep-info{
+      border-bottom: 2px solid #174d6c;
+      color: #174d6c;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 10px
+    }
     div.row{
       div[class|='col']{
         margin-bottom: 15px;
@@ -379,7 +386,7 @@ div.row.menu-container{
       .option-inner{
         width: 100%;
         padding: 25px 20px 20px 20px;
-        height: 380px;
+        height: 400px;
         min-width: 250px;
         margin: 10px auto;
         border: 2px solid #386f9e;
@@ -391,14 +398,14 @@ div.row.menu-container{
         span.glyphicon, span.fa{
           display: block;
           color: white;
-          font-size: 6.2rem;
+          font-size: 5.8rem;
           margin-bottom: 5px;
         }
 
 
           h2{
             font-weight: bold;
-            font-size: 2.9rem;
+            font-size: 2.7rem;
             color: white;
             //text-decoration: underline;
             word-break: normal;
@@ -478,6 +485,10 @@ div.row.rep-container{
       }
     }
 
+    button.btn.btn-success.btn-lg{
+      margin-left: -20px;
+    }
+
 }
 
 .btn-default {
@@ -530,6 +541,15 @@ div.row.rep-container{
   border-color: #8c8c8c;
   background-image: none;
 }
+
+
+div.well {
+  p {
+    font-size: 100%;
+  }
+}
+
+
 /*  MEDIA QUERIES */
 
 /* Large Devices, Wide Screens */
@@ -593,6 +613,13 @@ div.row.rep-container{
     .menu-option
       .option-inner{
         height: auto;
+      }
+    }
+
+    div.row.rep-container{
+      button.btn-lg.btn.btn-success{
+        margin: 43px 0 0 0;
+        font-size: 100%;
       }
     }
 

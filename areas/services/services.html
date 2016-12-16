@@ -7,28 +7,96 @@
         .fc-content {
 
         }
+
         .fc-time {
             display: block;
         }
+
         .fc-title {
             display: block;
         }
+
         .fc-row.fc-week.fc-widget-content {
             min-height: 185px;
         }
+
         .fc-view-container {
             padding-left: 0px;
         }
+
         #serviceDetails {
             padding-right: 0px;
         }
     </style>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1>My Services</h1>
+            <h1>My Services
+            </h1>
+            <div class="row" style="margin-bottom: 15px; padding-left">
+              <span ng-show="model.showFlaggedMsg" style="font-size: 20px; color: gray; margin-left: 16px;">
+                          <span class="color-indicator circle" style="background-color: #d87500; width: 15px; height: 15px;"></span>
+                          Showing only <strong>Flagged Services</strong>
+              </span>
+            </div>
+
             <div id="mobileServicesContainer">
                 <div id='servicesCalendar'></div>
                 <service-details></service-details>
+            </div>
+            <style type="text/css">
+                .color-indicator {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background-color: darkgray;
+                    margin-top: 1px;
+                }
+
+                .color-indicator.circle {
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    border-radius: 10px;
+                }
+            </style>
+            <br><br>
+            <div class="">
+                <div class="col-lg-4" style="margin-bottom: 10px; ">
+                    <div class="col-xs-2" style="text-align: center">
+                        <div class="color-indicator" style="background-color: #fcf8e3; border: 1px solid #ddd"></div>
+                    </div>
+                    <div class="col-xs-10" style="padding-left: 0">
+                        <p>
+                            Indicates <strong>Today</strong>'s date.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="margin-bottom: 10px; ">
+                    <div class="col-xs-2" style="text-align: center">
+                        <div class="color-indicator circle" style="background-color: #3a87ad"></div>
+                    </div>
+                    <div class="col-xs-10" style="padding-left: 0">
+                        <p>
+                            Indicates a <strong>Service</strong> event.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="margin-bottom: 10px; ">
+                    <div class="col-xs-2" style="text-align: center">
+                        <div class="color-indicator circle" style="background-color: #d87500"></div>
+                    </div>
+                    <div class="col-xs-10" style="padding-left: 0">
+                        <p>
+                            Indicates a <strong>Flagged Service</strong> event.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <br>
+                    <br>
+                    <p><i>For more information regarding your services, please contact your supports planner.</i></p>
+                    <br>
+                    <br>
+                </div>
             </div>
         </div>
     </div>

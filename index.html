@@ -17,8 +17,9 @@
     <script src="scripts/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
     <script src="scripts/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
     <script src="scripts/vendor/moment.js"></script>
-    <script src="scripts/vendor/fullcalendar-3.0.1/fullcalendar.js"></script>
+    <script src="scripts/vendor/fullcalendar-3.1.0/fullcalendar.js"></script>
     <script src="scripts/vendor/slickjs/slick.js"></script>
+    <script src="scripts/vendor/ngNotificationsBar/ngNotificationsBar.js"></script>
 
     <!-- AREAS -->
     <script src="areas/app.js"></script>
@@ -56,10 +57,14 @@
     <script src='areas/service-flags/new-service-flag.component.js'></script>
     <!-- AREA: Advanced Search Results -->
     <script src='areas/advanced-search-results/advanced-search-results.js'></script>
-    <!-- AREA:Service Details -->
+    <!-- AREA: Service Details -->
     <script src='areas/service-details/service-details.js'></script>
-    <!-- AREA:Service Details -->
+    <!-- AREA: Flagged Service Details -->
     <script src='areas/service-details-flagged/service-details-flagged.js'></script>
+    <!-- AREA: New Announcements -->
+    <script src='areas/new-announcements/new-announcements.component.js'></script>
+    <!-- AREA: MA# Check  -->
+    <script src="areas/ma-number-check/manumber.js"></script>
 
 
     <!-- SHARED -->
@@ -69,6 +74,7 @@
     <script src="views/shared/components/modal/modal.component.js"></script>
     <script src="views/shared/components/navbar-header/navbar-header.component.js"></script>
     <script src="views/shared/components/back-button/back-button.component.js"></script>
+    <script src="views/shared/components/layout-footer/layout-footer.component.js"></script>
 
     <!-- SHARED: Layouts -->
     <script src="views/shared/layouts/left-navbar-layout/left-navbar.layout.js"></script>
@@ -91,10 +97,12 @@
     <link rel="stylesheet" href="scripts/vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link href="scripts/vendor/bootstrap-multiselect/bootstrap-multiselect.css" rel="stylesheet"/>
     <link href="scripts/vendor/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet"/>
-    <link href="scripts/vendor/fullcalendar-3.0.1/fullcalendar.css" rel="stylesheet"/>
+    <link href="scripts/vendor/fullcalendar-3.1.0/fullcalendar.css" rel="stylesheet"/>
     <link href="scripts/vendor/slickjs/slick.css" rel="stylesheet"/>
     <link href="scripts/vendor/slickjs/slick-theme.css" rel="stylesheet"/>
     <link href="content/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="scripts/vendor/ngNotificationsBar/ngNotificationsBar.css" rel="stylesheet">
+    <link href="content/overrides/ngNotificationsBar.css" rel="stylesheet"/>
     <link href="content/overrides/fullcalendar.css" rel="stylesheet"/>
     <link href="content/teft/app.css" rel="stylesheet"/>
 
@@ -105,30 +113,14 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body style="padding-top: 50px;">
+<body style="padding-top: 50px;" id="main-content" ng-app="macwisWebApp">
     <div class="container-fluid">
         <div class="col-md-offset-2 col-md-8">
-            <div id="main-content" ng-app="macwisWebApp">
+            <div>
                 <macwis-web-app></macwis-web-app>
             </div>
         </div>
     </div>
-    <footer class="footer">
-      <div class="container-fluid">
-        <div class="pull-left">
-          <p class="text-muted">MyLTSS (Long Term Services and Supports)</p>
-          <p class="text-muted">Hi Abigail! Today is January, 24th, 2016</p>
-        </div>
-        <div class="pull-right">
-          <div class="col-md-9">
-            <p class="text-muted pull-right">
-              As of January 8, 2016, your Plan of Service is active and
-              eligible to receive services until January 7, 2017.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+<layout-footer></layout-footer>
 </body>
 </html>

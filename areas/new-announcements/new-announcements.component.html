@@ -1,0 +1,202 @@
+<style type="text/css">
+
+    .slick-dots li button:before {
+        color: #494949;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #05579a;
+    }
+
+    .slick-dots li button:before,
+    .slick-dots li.slick-active button:before {
+        font-size: 50px;
+    }
+    .modal.announcements {
+        display: block;
+    }
+</style>
+<div class="modal announcements fade in" aria-hidden="false" ng-show="model.showAnnouncementsModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">{{model.modalTitle}}</h3>
+            </div>
+            <div class="modal-body">
+                <div id="flag-wizard" ng-show="model.showAnnouncements">
+                    <div style="min-height: 350px;">
+                        <br><br><br>
+                        <div class="">
+                            <div style="background-color: #174d6c; padding: 15px; border-radius: 6px">
+                                <h4 class="h2" style="color: white; padding: 0; margin: 0"><strong>Welcome to MyLTSS Maryland!</strong></h4>
+                                <h4 style="color: white">
+                                    <p>Here, you will find information about your services and supports.</p>
+                                    <p>Since this is your first time on MyLTSS, here are few tips to help you get started!</p>
+                                </h4>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div style="min-height: 350px;">
+                        <br>
+                        <p>
+                                <span class="col-xs-1">
+                                    <span class="fa fa-group" style="font-size: 275%"></span>
+                                </span>
+                            <span class="col-xs-11">
+                                    <strong class="h3">My Representatives</strong><br>
+                                    In the <strong>MyLTSS</strong> system, you can give your representatives access to sign in and help you manage your services. <br> <br>
+                                Would you like to invite your representatives to help you manage your <strong>MyLTSS</strong> today?
+                                </span>
+                        </p>
+
+                            <div class="row">
+
+                                <div class="col-xs-4 col-xs-offset-2 col-sm-offset-2 col-sm-4" style="text-align: center">
+                                  <br>
+                                    <button class="btn btn-block btn-success" ng-click="model.nextAnnouncement(); model.showSubmitBtn()">Yes</button>
+                                </div>
+                                <div class="col-xs-4 col-sm-4" style="text-align: center">
+                                  <br>
+                                    <button class="btn btn-default btn-block" style="white-space: normal;" ng-click="model.cancelConfirmation()">No, I'll skip for now</button>
+                                </div>
+                            </div>
+                    </div>
+                    <div style="min-height: 350px;">
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="container-fluid">
+                                    <p>
+                                        <span class="h3">Please select the representatives you would like to invite.</span><br><br>
+                                    </p>
+                                    <div class="row rep-container">
+                                        <div class="col-xs-12">
+                                            <div class="well row">
+                                                <div class="col-xs-7 col-sm-10 col-md-10 col-lg-10">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <h2>Bryan Giles</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <span class="label">Phone Number:</span> <span
+                                                                class="data-element">240-305-2412</span>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <span class="label">Email Address:</span>
+                                                            <span class="data-element">jdoe116@yahoo.com</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2">
+                                                    <button type="button"  class="btn btn-success btn-lg" ng-click="model.sendConfirmation(this, 'Bryan Giles')">
+                                                        <span class="fa fa-paper-plane" style="font-size: 125%;"></span><br>
+                                                        Send Invite
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row rep-container">
+                                        <div class="col-xs-12">
+                                            <div class="well row">
+                                                <div class="col-xs-7 col-sm-10 col-md-10 col-lg-10">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <h2>Marc Okubo</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <span class="label">Phone Number:</span> <span
+                                                                class="data-element">240-305-2412</span>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <span class="label">Email Address:</span>
+                                                            <span class="data-element">jdoe116@yahoo.com</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2">
+                                                    <button type="button" class="btn btn-success btn-lg" ng-click="model.sendConfirmation(this, 'Marc Okubo')">
+                                                        <span class="fa fa-paper-plane" style="font-size: 150%;"></span><br>
+                                                        Send Invite
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row rep-container">
+                                        <div class="col-xs-12">
+                                            <div class="well row">
+                                                <div class="col-xs-7 col-sm-10 col-md-10 col-lg-10">
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <h2>Aaron Beam</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <span class="label">Phone Number:</span> <span
+                                                                class="data-element">240-305-2412</span>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <span class="label">Email Address:</span>
+                                                            <span class="data-element">jdoe116@yahoo.com</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2">
+                                                    <button type="button" class="btn btn-success btn-lg" ng-click="model.sendConfirmation(this, 'Aaron Beam')">
+                                                        <span class="fa fa-paper-plane" style="font-size: 150%;"></span><br>
+                                                        Send Invite
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-show="model.showCancelConfirmation">
+                    <div style="min-height: 350px;">
+                        <br><br><br>
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <p class="h3">You can always send an invitation to your representative later, if you choose to do so.
+                                <br><br>Simply visit the <strong>View My Information</strong> section of <strong>MyLTSS</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-show="model.showSendConfirmation">
+                    <div style="min-height: 350px;">
+                        <br><br><br>
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <span class="h2"><strong>Success!</strong></span><br><br>
+                            <p class="h3">An invitation has been emailed to the selected representatives.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer" style="text-align: left">
+                <button class="btn btn-default" type="button" ng-show="model.showPrevBtn" ng-click="model.prevAnnouncement()" style="float:left;"><span class="fa fa-chevron-left"></span>&nbsp;Previous</button>
+                <button class="btn btn-default" type="button" ng-show="model.showNextBtn" ng-click="model.nextAnnouncement()" style="float:right">Next&nbsp;<span class="fa fa-chevron-right"></span></button>
+                <button class="btn btn-danger" type="button" ng-show="model.showCancelBtn" ng-click="model.cancelConfirmation()" style="float: left;">Cancel</button>
+                <button class="btn btn-default" type="button" ng-show="model.showDoneBtn" ng-click="model.closeModal()" style="float: right;">Done</button>
+                <button class="btn btn-success" type="button" ng-show="model.showSendBtn" ng-click="model.sendConfirmation()" style="float: right;">Send Invite</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade in" ng-show="model.showAnnouncementsModal"></div>

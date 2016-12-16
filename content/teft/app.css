@@ -254,6 +254,14 @@ div.input-background div.row span.data-element {
   font-size: 1.6rem;
   display: inline-block;
 }
+div.container-fluid.input-background.planofservice h3.rep-info,
+div.input-background.planofservice h3.rep-info {
+  border-bottom: 2px solid #174d6c;
+  color: #174d6c;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 div.container-fluid.input-background.planofservice div.row div[class|='col'],
 div.input-background.planofservice div.row div[class|='col'] {
   margin-bottom: 15px;
@@ -300,7 +308,7 @@ div.row.menu-container .menu-option a:hover {
 div.row.menu-container .menu-option a .option-inner {
   width: 100%;
   padding: 25px 20px 20px 20px;
-  height: 380px;
+  height: 400px;
   min-width: 250px;
   margin: 10px auto;
   border: 2px solid #386f9e;
@@ -324,12 +332,12 @@ div.row.menu-container .menu-option a .option-inner span.glyphicon,
 div.row.menu-container .menu-option a .option-inner span.fa {
   display: block;
   color: white;
-  font-size: 6.2rem;
+  font-size: 5.8rem;
   margin-bottom: 5px;
 }
 div.row.menu-container .menu-option a .option-inner h2 {
   font-weight: bold;
-  font-size: 2.9rem;
+  font-size: 2.7rem;
   color: white;
   word-break: normal;
   margin-bottom: 25px;
@@ -390,6 +398,9 @@ div.row.rep-container span.label {
 }
 div.row.rep-container span.data-element {
   font-size: 2rem;
+}
+div.row.rep-container button.btn.btn-success.btn-lg {
+  margin-left: -20px;
 }
 .btn-default {
   background-color: #f5f5f5;
@@ -452,6 +463,9 @@ div.row.rep-container span.data-element {
   border-color: #8c8c8c;
   background-image: none;
 }
+div.well p {
+  font-size: 100%;
+}
 /*  MEDIA QUERIES */
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
@@ -489,6 +503,10 @@ div.row.rep-container span.data-element {
 @media only screen and (max-width: 480px) {
   div.row.menu-container .menu-option .option-inner {
     height: auto;
+  }
+  div.row.rep-container button.btn-lg.btn.btn-success {
+    margin: 43px 0 0 0;
+    font-size: 100%;
   }
 }
 /* Custom, iPhone Retina */
