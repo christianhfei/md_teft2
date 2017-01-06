@@ -37,7 +37,7 @@ select.required {
   background: rgba(244, 248, 42, 0.39) !important;
 }
 .btn.btn-warning {
-  background: linear-gradient(to bottom, #cc0000 0%, #cc0000 100%);
+  background: #d87500;
 }
 label.required::after {
   content: "*";
